@@ -85,7 +85,7 @@
 
   /* HERO */
   .hero {
-    background: var(--sand);
+    background: url('images/brandon-desjarlais-ydriVvor1Ww-unsplash.jpg') center center / cover no-repeat;
     padding: 6rem 2rem 5rem;
     text-align: center;
     position: relative;
@@ -95,7 +95,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(232,99,42,0.07) 0%, transparent 70%);
+    background: rgba(249,246,240,0.82);
     pointer-events: none;
   }
   .hero-eyebrow {
@@ -232,6 +232,7 @@
     justify-content: center;
     font-size: 3rem;
     position: relative;
+    overflow: hidden;
   }
   .listing-img.lavender { background: linear-gradient(135deg, #d4c6e8 0%, #b9a6d4 100%); }
   .listing-img.hills { background: linear-gradient(135deg, #c5d9a0 0%, #8fa86a 100%); }
@@ -647,30 +648,30 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-eyebrow">Ojai Valley · Ventura County · California</div>
-  <h1>Live in <em>Ojai</em></h1>
+  <h1>Live in the <em>Ojai Valley</em></h1>
   <p class="hero-sub">
-    Homes for sale in one of California's most beloved small towns — surrounded by the Topatopa Mountains, fragrant with lavender and orange blossoms, and alive with art, culture, and community.
+    Homes available in one of California's most beloved small towns — surrounded by the Topatopa Mountains, fragrant with lavender and orange blossoms, and alive with art, culture, and community.
   </p>
   <div class="hero-ctas">
-    <a href="#listings" class="btn-primary">View Current Listings</a>
+    <a href="#listings" class="btn-primary">View Available Homes</a>
     <a href="#neighborhood" class="btn-secondary">Explore the Valley</a>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="val">3,800</span>
-      <span class="lbl">Acres · Los Padres</span>
+      <span class="lbl">Acres · Los Padres Forest</span>
     </div>
     <div class="hero-stat">
       <span class="val">~10K</span>
-      <span class="lbl">Residents</span>
+      <span class="lbl">City of Ojai residents</span>
     </div>
     <div class="hero-stat">
       <span class="val">80mi</span>
-      <span class="lbl">From LA</span>
+      <span class="lbl">From LA · via Hwy 33</span>
     </div>
     <div class="hero-stat">
       <span class="val">1874</span>
-      <span class="lbl">Founded</span>
+      <span class="lbl">City incorporated</span>
     </div>
   </div>
 </div>
@@ -680,14 +681,14 @@
   <div class="container">
     <p class="section-label">Available Homes</p>
     <h2 class="section-title">Homes in <em>the Valley</em></h2>
-    <p class="section-intro">A curated selection of homes in Ojai and the surrounding valley. Contact Sheryl to schedule a showing or ask about off-market properties.</p>
+    <p class="section-intro">Homes for sale and for rent in Ojai and the surrounding valley. Contact Sheryl to schedule a showing, ask about rentals, or inquire about off-market properties.</p>
 
     <div class="listings-grid">
 
       <div class="listing-card">
-        <div class="listing-img lavender">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg" alt="Lavender Ridge" style="width:100%;height:100%;object-fit:cover;">
           <span class="listing-badge available">Active</span>
-          🌿
         </div>
         <div class="listing-body">
           <div class="listing-name">Lavender Ridge</div>
@@ -706,9 +707,9 @@
       </div>
 
       <div class="listing-card">
-        <div class="listing-img downtown">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/justin-aikin-5SslpF5zdBw-unsplash.jpg" alt="The Arcade Bungalow" style="width:100%;height:100%;object-fit:cover;">
           <span class="listing-badge available">Active</span>
-          🏘️
         </div>
         <div class="listing-body">
           <div class="listing-name">The Arcade Bungalow</div>
@@ -727,9 +728,9 @@
       </div>
 
       <div class="listing-card">
-        <div class="listing-img hills">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/steve-sharp-dE4MtagyY4w-unsplash.jpg" alt="Foothill Retreat" style="width:100%;height:100%;object-fit:cover;">
           <span class="listing-badge pending">Pending</span>
-          🌾
         </div>
         <div class="listing-body">
           <div class="listing-name">Foothill Retreat</div>
@@ -748,9 +749,9 @@
       </div>
 
       <div class="listing-card">
-        <div class="listing-img estate">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/steve-sharp-MMo9HZ6mO5U-unsplash.jpg" alt="The Creek House" style="width:100%;height:100%;object-fit:cover;">
           <span class="listing-badge available">Active</span>
-          🌊
         </div>
         <div class="listing-body">
           <div class="listing-name">The Creek House</div>
@@ -859,8 +860,12 @@
     </div>
 
     <div class="hood-photo-pair">
-      <div class="hood-photo oak">🌳</div>
-      <div class="hood-photo mission">🏛️</div>
+      <div class="hood-photo" style="padding:0; overflow:hidden;">
+        <img src="images/51963607145_af20d71e3a_k.jpg" alt="Ojai Valley" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="hood-photo" style="padding:0; overflow:hidden;">
+        <img src="images/1280px-Ojai_Valley_Museum_2014_02.jpg" alt="Ojai Valley Museum" style="width:100%;height:100%;object-fit:cover;">
+      </div>
     </div>
   </div>
 </section>
@@ -903,8 +908,12 @@
 
       <div class="about-photo-stack">
         <div class="about-photos">
-          <div class="about-photo valley">🏔️</div>
-          <div class="about-photo citrus">🍊</div>
+          <div class="about-photo" style="padding:0; overflow:hidden;">
+            <img src="images/brandon-desjarlais-ydriVvor1Ww-unsplash.jpg" alt="Ojai Valley aerial" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="about-photo" style="padding:0; overflow:hidden;">
+            <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg" alt="Ojai wildflowers" style="width:100%;height:100%;object-fit:cover;">
+          </div>
         </div>
       </div>
     </div>
