@@ -95,8 +95,16 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(249,246,240,0.88);
+    background: rgba(249,246,240,0.75);
     pointer-events: none;
+  }
+  .hero h1, .hero .hero-eyebrow, .hero .hero-sub, .hero .hero-stat .val, .hero .hero-stat .lbl {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-ctas, .hero-stats {
+    position: relative;
+    z-index: 1;
   }
   .hero-eyebrow {
     font-size: 0.78rem;
@@ -647,6 +655,7 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center;">
   <div class="hero-eyebrow">Ojai Valley · Ventura County · California</div>
   <h1>Live in the <em>Ojai Valley</em></h1>
   <p class="hero-sub">
@@ -673,6 +682,7 @@
       <span class="val">1874</span>
       <span class="lbl">City incorporated</span>
     </div>
+  </div>
   </div>
 </div>
 
