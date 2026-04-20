@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ojai Homes — Real Estate in Ojai, CA · NextHome</title>
+<meta name="description" content="Homes for sale and neighborhood resources in Ojai, California. Local expertise with NextHome agent Sheryl.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #E8632A;
+    --orange-light: #FDF0E9;
+    --orange-dark: #B84E1E;
+    --gray: #5F5E5A;
+    --gray-light: #F5F4F1;
+    --gray-dark: #2C2C2A;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --sand: #F9F6F0;
+    --text: #2C2C2A;
+    --muted: #888780;
+    --border: rgba(0,0,0,0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    background: #fff;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .nav-brand .nh-badge {
+    background: var(--orange);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 3px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .nav-brand .site-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--orange); }
+
+  /* HERO */
+  .hero {
+    background: url('images/brandon-desjarlais-ydriVvor1Ww-unsplash.jpg') center center / cover no-repeat;
+    padding: 6rem 2rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(249,246,240,0.82);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--gray-dark);
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--orange);
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.65;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+  }
+  .btn-primary {
+    background: var(--orange);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--gray-dark);
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .val {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--gray-dark);
+  }
+  .hero-stat .lbl {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 960px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--gray-dark);
+    margin-bottom: 1rem;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--orange);
+  }
+  .section-intro {
+    color: var(--gray);
+    max-width: 560px;
+    margin-bottom: 3rem;
+  }
+
+  /* LISTINGS */
+  #listings { background: #fff; }
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .listing-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .listing-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+  }
+  .listing-img {
+    height: 200px;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .listing-img.lavender { background: linear-gradient(135deg, #d4c6e8 0%, #b9a6d4 100%); }
+  .listing-img.hills { background: linear-gradient(135deg, #c5d9a0 0%, #8fa86a 100%); }
+  .listing-img.downtown { background: linear-gradient(135deg, #f0d5a8 0%, #d4a86a 100%); }
+  .listing-img.estate { background: linear-gradient(135deg, #a8c4d4 0%, #6a8fa8 100%); }
+  .listing-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+  .listing-badge.available { background: #2D7A4F; }
+  .listing-badge.pending { background: var(--blue); }
+  .listing-body { padding: 1.25rem; }
+  .listing-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 0.25rem;
+  }
+  .listing-address {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+  .listing-details {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.82rem;
+    color: var(--gray);
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+  }
+  .listing-desc {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .listing-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 0.35rem;
+  }
+  .listing-avail {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .listing-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--orange);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .listing-link:hover { border-color: var(--orange); }
+
+  /* QUICK-DISTANCE STRIP */
+  .distance-strip {
+    background: var(--sand);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .dist-item { text-align: center; }
+  .dist-val {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+  }
+  .dist-lbl {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  /* NEIGHBORHOOD */
+  #neighborhood { background: var(--sand); }
+  .hood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  @media (max-width: 640px) { .hood-grid { grid-template-columns: 1fr; } }
+  .hood-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--orange);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+  .hood-list {
+    list-style: none;
+  }
+  .hood-list li {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .hood-list li:last-child { border-bottom: none; }
+  .hood-list .place { color: var(--gray-dark); }
+  .hood-list .dist { color: var(--muted); font-size: 0.8rem; }
+
+  .hood-photo-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .hood-photo {
+    border-radius: 8px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  .hood-photo.oak { background: linear-gradient(135deg, #a8c48a 0%, #6e9451 100%); }
+  .hood-photo.mission { background: linear-gradient(135deg, #e8d0a8 0%, #c4a870 100%); }
+
+  /* ABOUT */
+  #about { background: #fff; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .about-stat {
+    background: var(--sand);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .about-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--orange);
+    display: block;
+  }
+  .about-stat .desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .about-photo-stack {
+    position: relative;
+  }
+  .about-photos {
+    display: grid;
+    grid-template-rows: 220px 180px;
+    gap: 1rem;
+  }
+  .about-photo {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .about-photo.valley { background: linear-gradient(160deg, #c8b8e0 0%, #9a7ab8 100%); }
+  .about-photo.citrus { background: linear-gradient(160deg, #f5d5a0 0%, #d4a060 100%); }
+
+  /* AGENT */
+  #agent {
+    background: var(--gray-dark);
+    color: #fff;
+    padding: 5rem 2rem;
+  }
+  #agent .section-label { color: var(--orange); }
+  #agent .section-title { color: #fff; }
+  .agent-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 640px) { .agent-grid { grid-template-columns: 1fr; } }
+  .agent-photo {
+    width: 180px;
+    height: 220px;
+    border-radius: 8px;
+    background: linear-gradient(160deg, #888 0%, #555 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    flex-shrink: 0;
+  }
+  .agent-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .agent-title {
+    color: var(--orange);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .agent-bio {
+    color: rgba(255,255,255,0.72);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+    max-width: 480px;
+  }
+  .agent-contact {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .agent-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .agent-contact a:hover { border-color: var(--orange); color: var(--orange); }
+  .nh-logo-block {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .nh-logo-text {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+  .nh-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.04em;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--sand); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--orange);
+  }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .submit-btn {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .submit-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  .contact-info p {
+    font-size: 0.92rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .contact-detail a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .contact-detail a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    background: var(--gray-dark);
+    color: rgba(255,255,255,0.55);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  footer nav {
+    background: transparent;
+    border: none;
+    position: static;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    display: flex;
+  }
+  footer nav a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+  footer nav a:hover { color: var(--orange); }
+  .footer-note {
+    margin-top: 1.5rem;
+    font-size: 0.77rem;
+    color: rgba(255,255,255,0.3);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* RESPONSIVE NAV */
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hero-stats { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">
+    <span class="site-name">Ojai Homes</span>
+    <span class="nh-badge">NextHome</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#listings">Listings</a></li>
+    <li><a href="#neighborhood">Neighborhood</a></li>
+    <li><a href="#about">About Ojai</a></li>
+    <li><a href="#agent">Your Agent</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Ojai Valley · Ventura County · California</div>
+  <h1>Live in the <em>Ojai Valley</em></h1>
+  <p class="hero-sub">
+    Homes available in one of California's most beloved small towns — surrounded by the Topatopa Mountains, fragrant with lavender and orange blossoms, and alive with art, culture, and community.
+  </p>
+  <div class="hero-ctas">
+    <a href="#listings" class="btn-primary">View Available Homes</a>
+    <a href="#neighborhood" class="btn-secondary">Explore the Valley</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="val">3,800</span>
+      <span class="lbl">Acres · Los Padres Forest</span>
+    </div>
+    <div class="hero-stat">
+      <span class="val">~10K</span>
+      <span class="lbl">City of Ojai residents</span>
+    </div>
+    <div class="hero-stat">
+      <span class="val">80mi</span>
+      <span class="lbl">From LA · via Hwy 33</span>
+    </div>
+    <div class="hero-stat">
+      <span class="val">1874</span>
+      <span class="lbl">City incorporated</span>
+    </div>
+  </div>
+</div>
+
+<!-- LISTINGS -->
+<section id="listings">
+  <div class="container">
+    <p class="section-label">Available Homes</p>
+    <h2 class="section-title">Homes in <em>the Valley</em></h2>
+    <p class="section-intro">Homes for sale and for rent in Ojai and the surrounding valley. Contact Sheryl to schedule a showing, ask about rentals, or inquire about off-market properties.</p>
+
+    <div class="listings-grid">
+
+      <div class="listing-card">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg" alt="Lavender Ridge" style="width:100%;height:100%;object-fit:cover;">
+          <span class="listing-badge available">Active</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">Lavender Ridge</div>
+          <div class="listing-address">Upper Ojai Road · Ojai, CA 93023</div>
+          <div class="listing-details">
+            <span>🛏 3 bed</span>
+            <span>🚿 2 bath</span>
+            <span>🏡 1,850 sq ft</span>
+            <span>🌄 Mountain views</span>
+          </div>
+          <p class="listing-desc">Craftsman-style home on half an acre with sweeping views of the Topatopa Mountains. Mature lavender, fruit trees, and a covered porch that catches the "Pink Moment" every evening.</p>
+          <div class="listing-price">$1,195,000</div>
+          <div class="listing-avail">⏱ Available now</div>
+          <a class="listing-link" href="#contact">Inquire with Sheryl →</a>
+        </div>
+      </div>
+
+      <div class="listing-card">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/justin-aikin-5SslpF5zdBw-unsplash.jpg" alt="The Arcade Bungalow" style="width:100%;height:100%;object-fit:cover;">
+          <span class="listing-badge available">Active</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">The Arcade Bungalow</div>
+          <div class="listing-address">Signal Street · Ojai, CA 93023</div>
+          <div class="listing-details">
+            <span>🛏 2 bed</span>
+            <span>🚿 1 bath</span>
+            <span>🏡 1,120 sq ft</span>
+            <span>🚶 Walk to Arcade</span>
+          </div>
+          <p class="listing-desc">Vintage 1940s bungalow two blocks from Ojai's beloved Arcade. Original hardwood floors, updated kitchen, private yard. Stroll to galleries, Farmer & the Cook, and the Sunday farmers market.</p>
+          <div class="listing-price">$875,000</div>
+          <div class="listing-avail">⏱ Available now</div>
+          <a class="listing-link" href="#contact">Inquire with Sheryl →</a>
+        </div>
+      </div>
+
+      <div class="listing-card">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/steve-sharp-dE4MtagyY4w-unsplash.jpg" alt="Foothill Retreat" style="width:100%;height:100%;object-fit:cover;">
+          <span class="listing-badge pending">Pending</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">Foothill Retreat</div>
+          <div class="listing-address">Cuyama Road · Ojai, CA 93023</div>
+          <div class="listing-details">
+            <span>🛏 4 bed</span>
+            <span>🚿 3 bath</span>
+            <span>🏡 2,400 sq ft</span>
+            <span>🌳 2.1 acres</span>
+          </div>
+          <p class="listing-desc">Spacious Spanish revival on two acres at the foot of the Sulphur Mountain foothills. Pool, detached studio/ADU, and room for horses. A rare find in the upper valley.</p>
+          <div class="listing-price">$1,850,000</div>
+          <div class="listing-avail">⏱ In escrow — backup offers welcome</div>
+          <a class="listing-link" href="#contact">Inquire with Sheryl →</a>
+        </div>
+      </div>
+
+      <div class="listing-card">
+        <div class="listing-img" style="padding:0; overflow:hidden;">
+          <img src="images/steve-sharp-MMo9HZ6mO5U-unsplash.jpg" alt="The Creek House" style="width:100%;height:100%;object-fit:cover;">
+          <span class="listing-badge available">Active</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">The Creek House</div>
+          <div class="listing-address">Creek Road · Meiners Oaks, CA 93023</div>
+          <div class="listing-details">
+            <span>🛏 3 bed</span>
+            <span>🚿 2 bath</span>
+            <span>🏡 1,640 sq ft</span>
+            <span>💧 Creek frontage</span>
+          </div>
+          <p class="listing-desc">Serene mid-century home backing up to Ventura River headwaters. Sound of running water year-round. Easy access to the Ojai Valley Trail for cycling and walking into town.</p>
+          <div class="listing-price">$995,000</div>
+          <div class="listing-avail">⏱ Available now</div>
+          <a class="listing-link" href="#contact">Inquire with Sheryl →</a>
+        </div>
+      </div>
+
+      <div class="listing-card" style="border: 2px dashed rgba(0,0,0,0.12); background: var(--sand);">
+        <div class="listing-img" style="background: var(--gray-light);">
+          🏠
+        </div>
+        <div class="listing-body">
+          <div class="listing-name" style="font-style: italic; color: var(--muted);">Your property here</div>
+          <div class="listing-address">Ojai Valley · Ventura County</div>
+          <p class="listing-desc" style="margin-top: 0.5rem;">Selling in Ojai? Sheryl knows this market deeply — local buyers, local networks, and a marketing approach that matches the character of the valley.</p>
+          <a class="listing-link" href="#contact">List with Sheryl →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="distance-strip">
+      <div class="dist-item">
+        <span class="dist-val">2min</span>
+        <span class="dist-lbl">Downtown Arcade · walk</span>
+      </div>
+      <div class="dist-item">
+        <span class="dist-val">5min</span>
+        <span class="dist-lbl">Libbey Park · drive</span>
+      </div>
+      <div class="dist-item">
+        <span class="dist-val">15min</span>
+        <span class="dist-lbl">Lake Casitas · drive</span>
+      </div>
+      <div class="dist-item">
+        <span class="dist-val">30min</span>
+        <span class="dist-lbl">Ventura Beach · drive</span>
+      </div>
+      <div class="dist-item">
+        <span class="dist-val">80min</span>
+        <span class="dist-lbl">Los Angeles · drive</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOOD -->
+<section id="neighborhood">
+  <div class="container">
+    <p class="section-label">Life in the Valley</p>
+    <h2 class="section-title">The <em>Ojai</em> neighborhood</h2>
+    <p class="section-intro">Tucked into a mountain valley east of Santa Barbara, Ojai is an intentional community — artsy, agricultural, and fiercely independent.</p>
+
+    <div class="hood-grid">
+      <div class="hood-column">
+        <h3>Downtown & Culture</h3>
+        <ul class="hood-list">
+          <li><span class="place">Ojai Arcade</span><span class="dist">5 min walk</span></li>
+          <li><span class="place">Libbey Park & Bowl</span><span class="dist">8 min walk</span></li>
+          <li><span class="place">Ojai Art Center</span><span class="dist">10 min walk</span></li>
+          <li><span class="place">Bart's Books (outdoor)</span><span class="dist">5 min walk</span></li>
+          <li><span class="place">Ojai Valley Museum</span><span class="dist">8 min walk</span></li>
+          <li><span class="place">Sunday Farmers Market</span><span class="dist">10 min walk</span></li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Dining & Coffee</h3>
+        <ul class="hood-list">
+          <li><span class="place">Farmer & the Cook</span><span class="dist">5 min drive</span></li>
+          <li><span class="place">Azu Restaurant</span><span class="dist">5 min drive</span></li>
+          <li><span class="place">Beacon Coffee</span><span class="dist">3 min drive</span></li>
+          <li><span class="place">Ranch House (historic)</span><span class="dist">10 min drive</span></li>
+          <li><span class="place">Ojai Beverage Company</span><span class="dist">5 min drive</span></li>
+        </ul>
+      </div>
+
+      <div class="hood-column">
+        <h3>Outdoors & Recreation</h3>
+        <ul class="hood-list">
+          <li><span class="place">Ojai Valley Trail (trail)</span><span class="dist">steps away</span></li>
+          <li><span class="place">Los Padres National Forest</span><span class="dist">10 min drive</span></li>
+          <li><span class="place">Lake Casitas (fishing)</span><span class="dist">15 min drive</span></li>
+          <li><span class="place">Nordhoff Peak (hike)</span><span class="dist">25 min drive</span></li>
+          <li><span class="place">Ojai Valley Inn & Spa</span><span class="dist">5 min drive</span></li>
+          <li><span class="place">Matilija Hot Springs</span><span class="dist">20 min drive</span></li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Schools & Services</h3>
+        <ul class="hood-list">
+          <li><span class="place">Ojai Unified School District</span><span class="dist">in town</span></li>
+          <li><span class="place">Thacher School (boarding)</span><span class="dist">10 min drive</span></li>
+          <li><span class="place">Ventura County Medical Center</span><span class="dist">30 min drive</span></li>
+          <li><span class="place">Ventura Airport (VNY)</span><span class="dist">35 min drive</span></li>
+          <li><span class="place">LAX</span><span class="dist">90 min drive</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hood-photo-pair">
+      <div class="hood-photo" style="padding:0; overflow:hidden;">
+        <img src="images/51963607145_af20d71e3a_k.jpg" alt="Ojai Valley" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="hood-photo" style="padding:0; overflow:hidden;">
+        <img src="images/1280px-Ojai_Valley_Museum_2014_02.jpg" alt="Ojai Valley Museum" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT OJAI -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="section-label">About the Town</p>
+        <h2 class="section-title">A place like <em>no other</em></h2>
+        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.75;">
+          Ojai — pronounced "OH-hi" — takes its name from the Chumash word for "moon." The valley sits in a rare east-west running mountain range, which creates the legendary "Pink Moment": at sunset, the Topatopa Mountains turn a luminous shade of pink while the valley below falls into shadow.
+        </p>
+        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.75;">
+          The town has attracted artists, writers, and seekers for over a century — from philosopher Krishnamurti, who spent much of his life here, to the generations of potters, painters, and musicians who still form the backbone of its community today.
+        </p>
+        <p style="color: var(--gray); font-size: 0.95rem; line-height: 1.75;">
+          Ojai's agriculture shapes daily life: avocados, citrus, honey, and wine grapes thrive in the valley soil. The Sunday market is a town institution. Despite its proximity to Los Angeles, Ojai has maintained strict development limits — preserving its small-town character and the agricultural land that defines the valley.
+        </p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="num">1,200+</span>
+            <span class="desc">Years of Chumash settlement</span>
+          </div>
+          <div class="about-stat">
+            <span class="num">2,800′</span>
+            <span class="desc">Topatopa peak elevation</span>
+          </div>
+          <div class="about-stat">
+            <span class="num">~77°</span>
+            <span class="desc">Average high in summer</span>
+          </div>
+          <div class="about-stat">
+            <span class="num">0</span>
+            <span class="desc">Chain restaurants downtown</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-photo-stack">
+        <div class="about-photos">
+          <div class="about-photo" style="padding:0; overflow:hidden;">
+            <img src="images/brandon-desjarlais-ydriVvor1Ww-unsplash.jpg" alt="Ojai Valley aerial" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="about-photo" style="padding:0; overflow:hidden;">
+            <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg" alt="Ojai wildflowers" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section id="agent">
+  <div class="container">
+    <p class="section-label">Your Local Expert</p>
+    <div class="agent-grid">
+      <div class="agent-photo">👩</div>
+      <div class="agent-info">
+        <h2>Sheryl [Last Name]</h2>
+        <div class="agent-title">Realtor · Ojai Valley Specialist</div>
+        <p class="agent-bio">
+          Sheryl brings deep local knowledge and genuine love for the Ojai Valley to every transaction. Whether you're buying your first home in the hills, selling a family estate, or relocating from the city in search of a quieter pace — she'll guide you through every step with honesty and care.
+        </p>
+        <p class="agent-bio">
+          Ojai is a unique market. Properties here aren't just investments — they're lifestyle choices. Sheryl understands both sides of that equation and works hard to make sure buyers and sellers find the right fit.
+        </p>
+        <div class="agent-contact">
+          <a href="tel:+1805000000">(805) 000-0000</a>
+          <a href="mailto:sheryl@nexthome.com">sheryl@nexthome.com</a>
+          <a href="#contact">Send a message</a>
+        </div>
+        <div class="nh-logo-block">
+          <div>
+            <div class="nh-name">NextHome</div>
+            <div class="nh-logo-text">Licensed in California · DRE #XXXXXXX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Inquire about <em>a home</em></h2>
+
+    <div class="contact-grid">
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="(805) 000-0000">
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in…</label>
+          <select id="interest">
+            <option value="">Select…</option>
+            <option>Lavender Ridge (Signal St)</option>
+            <option>The Arcade Bungalow</option>
+            <option>Foothill Retreat</option>
+            <option>The Creek House</option>
+            <option>Listing my home with Sheryl</option>
+            <option>General inquiry / not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell Sheryl what you're looking for…"></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Ready to find your place in the valley?</h3>
+        <p>Whether you're buying, selling, or just exploring what Ojai has to offer — Sheryl is the right person to call. She responds to every inquiry personally, usually within a few hours.</p>
+        <div class="contact-detail">
+          <strong style="font-size: 0.8rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;">Phone</strong>
+          <a href="tel:+18050000000">(805) 000-0000</a>
+        </div>
+        <div class="contact-detail">
+          <strong style="font-size: 0.8rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;">Email</strong>
+          <a href="mailto:sheryl@nexthome.com">sheryl@nexthome.com</a>
+        </div>
+        <div class="contact-detail">
+          <strong style="font-size: 0.8rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;">Office</strong>
+          <span style="font-size: 0.9rem; color: var(--gray);">NextHome · Ojai Valley<br>Ojai, CA 93023</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; line-height: 1.6;">
+          All property information is deemed reliable but not guaranteed. Buyer to verify. Sheryl is a licensed real estate agent in California, DRE #XXXXXXX, affiliated with NextHome.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Ojai Homes</div>
+  <div style="font-size: 0.82rem; margin-bottom: 0.5rem;">A NextHome neighborhood resource · Ojai Valley, CA 93023</div>
+  <nav>
+    <a href="#listings">Listings</a>
+    <a href="#neighborhood">Neighborhood</a>
+    <a href="#about">About Ojai</a>
+    <a href="#agent">Sheryl</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="footer-note">
+    Sheryl [Last Name] is an independent real estate agent licensed in California, affiliated with NextHome. This site is a neighborhood resource for buyers and sellers in the Ojai Valley. Not affiliated with the City of Ojai or any government entity.
+  </div>
+  <div style="margin-top: 1.5rem; font-size: 0.75rem; color: rgba(255,255,255,0.25);">© 2026 Ojai Homes · NextHome · All rights reserved</div>
+</footer>
+
+</body>
+</html>
