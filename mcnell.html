@@ -17,10 +17,16 @@
   .site-name { font-family:'Playfair Display',serif; font-size:1.15rem; }
   .nav-back { font-size:0.85rem; color:var(--muted); text-decoration:none; }
   .nav-back:hover { color:var(--orange); }
+
+  /* Hero */
   .hero-img { width:100%; height:55vh; min-height:380px; overflow:hidden; position:relative; background:var(--sand); display:flex; align-items:center; justify-content:center; }
   .hero-img img { width:100%; height:100%; object-fit:cover; }
+  .hero-img .hero-placeholder { display:flex; flex-direction:column; align-items:center; gap:0.75rem; color:var(--muted); }
+  .hero-img .hero-placeholder svg { opacity:0.35; }
+  .hero-img .hero-placeholder span { font-size:0.85rem; }
   .price-badge { position:absolute; bottom:2rem; left:2rem; background:rgba(0,0,0,0.72); color:#fff; font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:600; padding:0.6rem 1.2rem; border-radius:6px; }
   .status-badge { position:absolute; top:2rem; left:2rem; background:#2D7A4F; color:#fff; font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:5px 12px; border-radius:4px; }
+
   .container { max-width:1000px; margin:0 auto; padding:0 2rem; }
   .detail-grid { display:grid; grid-template-columns:1fr 300px; gap:3rem; padding:3rem 0; }
   @media(max-width:720px){ .detail-grid { grid-template-columns:1fr; } }
@@ -34,10 +40,13 @@
   .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; margin-top:0.75rem; }
   .feature { font-size:0.88rem; color:var(--gray); padding:0.3rem 0; border-bottom:1px solid var(--border); }
   .feature::before { content:'✓ '; color:var(--orange); font-weight:500; }
+
+  /* Sidebar */
   .sidebar { position:sticky; top:82px; align-self:start; }
   .contact-card { background:var(--sand); border-radius:10px; padding:1.5rem; }
   .contact-card .price { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:var(--gray-dark); margin-bottom:0.25rem; }
-  .contact-card .mls { font-size:0.78rem; color:var(--muted); margin-bottom:1.25rem; }
+  .contact-card .status-line { font-size:0.78rem; color:var(--muted); margin-bottom:0.2rem; }
+  .contact-card .mls-line { font-size:0.78rem; color:var(--muted); margin-bottom:1.25rem; }
   .agent-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem; padding-bottom:1.25rem; border-bottom:1px solid var(--border); }
   .agent-row img { width:48px; height:48px; border-radius:50%; object-fit:cover; object-position:center top; }
   .agent-row .name { font-weight:500; font-size:0.9rem; }
@@ -47,20 +56,26 @@
   .btn-secondary { display:block; width:100%; background:transparent; color:var(--gray-dark); border:1px solid rgba(0,0,0,0.2); padding:0.85rem; border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; text-align:center; text-decoration:none; transition:border-color 0.2s; }
   .btn-secondary:hover { border-color:var(--orange); color:var(--orange); }
   .disclaimer { font-size:0.72rem; color:var(--muted); line-height:1.5; margin-top:1rem; }
+
+  /* Gallery */
   .gallery-section { padding:2rem 0 4rem; }
   .gallery-section h2 { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:600; color:var(--gray-dark); margin-bottom:1.25rem; }
   .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0.75rem; }
   .gallery-grid img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; cursor:pointer; transition:opacity 0.2s,transform 0.2s; }
   .gallery-grid img:hover { opacity:0.88; transform:scale(1.01); }
-  .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:1000; align-items:center; justify-content:center; }
+
+  /* Lightbox */
+  .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:1000; align-items:center; justify-content:center; touch-action:pan-y; }
   .lightbox.open { display:flex; }
-  .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; }
+  .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; user-select:none; }
   .lb-close { position:absolute; top:1.5rem; right:1.5rem; color:#fff; font-size:2.5rem; cursor:pointer; background:none; border:none; line-height:1; }
   .lb-prev,.lb-next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:2rem; cursor:pointer; padding:0.75rem 1rem; border-radius:4px; }
   .lb-prev:hover,.lb-next:hover { background:rgba(255,255,255,0.3); }
   .lb-prev { left:1rem; }
   .lb-next { right:1rem; }
-  .lb-count { position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.6); font-size:0.85rem; }
+  .lb-count { position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.6); font-size:0.85rem; white-space:nowrap; }
+  @media(max-width:600px){ .lb-prev,.lb-next { display:none; } }
+
   footer { background:var(--gray-dark); color:rgba(255,255,255,0.5); padding:2rem; text-align:center; font-size:0.82rem; }
   footer a { color:rgba(255,255,255,0.5); text-decoration:none; margin:0 0.75rem; }
   footer a:hover { color:var(--orange); }
@@ -76,8 +91,15 @@
   <a class="nav-back" href="index.html#listings">← Back to listings</a>
 </nav>
 
-<div class="hero-img">
-  <img src="images/mcnell/e71ba472d74043a382f346daab323769-cc_ft_768.webp" alt="757 McNell Road, Ojai CA">
+<!-- Hero: shows first gallery photo; falls back gracefully if image missing -->
+<div class="hero-img" id="hero">
+  <img src="images/mcnell/e71ba472d74043a382f346daab323769-cc_ft_768.webp"
+       alt="757 McNell Road, Ojai CA"
+       onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex'">
+  <div id="hero-fallback" style="display:none; flex-direction:column; align-items:center; gap:0.75rem; color:var(--muted);">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.35"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span style="font-size:0.85rem;">757 McNell Road</span>
+  </div>
   <span class="status-badge">Active</span>
   <span class="price-badge">$1,970,000</span>
 </div>
@@ -94,9 +116,11 @@
         <div class="stat"><span class="val">0.32</span><span class="lbl">Acres</span></div>
         <div class="stat"><span class="val">$1,047</span><span class="lbl">Per Sq Ft</span></div>
       </div>
+
       <h2 class="section-title">About this property</h2>
       <p class="description">Located on one of Ojai's most beloved streets, 757 McNell Road offers the quintessential Ojai lifestyle — close to trails, close to town, and surrounded by the natural beauty that makes the valley so special. This 3-bedroom, 2-bath home sits on a third of an acre with room to breathe and the quiet character of a true Ojai neighborhood.</p>
       <p class="description">McNell Road runs through the heart of the East End, one of Ojai's most sought-after areas, with oak-canopied streets, mountain views, and easy access to the Ojai Valley Trail. A wonderful opportunity to put down roots in the valley.</p>
+
       <h2 class="section-title">Property highlights</h2>
       <div class="features-grid">
         <div class="feature">3 bedrooms · 2 bathrooms</div>
@@ -108,6 +132,7 @@
         <div class="feature">Close to downtown Ojai</div>
         <div class="feature">Single family residence</div>
       </div>
+
       <h2 class="section-title">Listing details</h2>
       <p class="description">Listed by Sheryl Whipple · NextHome Pacific Coast Realty · CalDRE #01379424 · (805) 901-7546</p>
     </div>
@@ -115,16 +140,18 @@
     <div class="sidebar">
       <div class="contact-card">
         <div class="price">$1,970,000</div>
-        <div class="mls">Active · NextHome Pacific Coast Realty</div>
+        <div class="status-line">Active · NextHome Pacific Coast Realty</div>
+        <div class="mls-line">MLS# V1-27412</div><!-- update with correct MLS# -->
         <div class="agent-row">
-          <img src="images/sheryl.jpg" alt="Sheryl Whipple">
+          <img src="images/sheryl.jpg" alt="Sheryl Whipple"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 48 48%22><circle cx=%2224%22 cy=%2224%22 r=%2224%22 fill=%22%23ddd%22/><text x=%2224%22 y=%2230%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23888%22>SW</text></svg>'">
           <div>
             <div class="name">Sheryl Whipple</div>
             <div class="title">NextHome Pacific Coast Realty</div>
           </div>
         </div>
         <a href="tel:+18059017546" class="btn-primary">Call (805) 901-7546</a>
-        <a href="index.html#contact" class="btn-secondary">Send a message</a>
+        <a href="mailto:sherylw.realestate@gmail.com?subject=Inquiry%3A%20757%20McNell%20Road&body=Hi%20Sheryl%2C%0A%0AI'm%20interested%20in%20757%20McNell%20Road%20(MLS%23%20V1-27412).%0A%0A" class="btn-secondary">Send a message</a>
         <p class="disclaimer">All information deemed reliable but not guaranteed. Buyer to verify all details. CalDRE #01379424</p>
       </div>
     </div>
@@ -134,17 +161,17 @@
 <div style="background:var(--sand); padding:0.5rem 0;">
   <div class="container">
     <div class="gallery-section">
-      <h2>Photo gallery — 29 photos</h2>
+      <h2 id="gallery-heading">Photo gallery</h2>
       <div class="gallery-grid" id="gallery"></div>
     </div>
   </div>
 </div>
 
-<div class="lightbox" id="lightbox">
-  <button class="lb-close" onclick="closeLightbox()">×</button>
-  <button class="lb-prev" onclick="changePhoto(-1)">‹</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo lightbox">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Close">×</button>
+  <button class="lb-prev" onclick="changePhoto(-1)" aria-label="Previous photo">‹</button>
   <img id="lb-img" src="" alt="">
-  <button class="lb-next" onclick="changePhoto(1)">›</button>
+  <button class="lb-next" onclick="changePhoto(1)" aria-label="Next photo">›</button>
   <div class="lb-count" id="lb-count"></div>
 </div>
 
@@ -158,6 +185,7 @@
 
 <script>
 const f = "images/mcnell/";
+// Deduplicated list — removed the duplicate e71ba472...cc_ft_768.webp that appeared twice (was photo #1 and #27)
 const photos = [
   f+"e71ba472d74043a382f346daab323769-cc_ft_768.webp",
   f+"21b695df08afd8609bd3932f230b0296-cc_ft_384.webp",
@@ -185,22 +213,31 @@ const photos = [
   f+"dfa4e5857e7e1471d28bd37dd3b97a2d-cc_ft_768.webp",
   f+"e2ef01c6b81342acd27ebe49cb7c3410-cc_ft_384.webp",
   f+"e4618825dbe5f017f7af3d71a295d70a-cc_ft_768.webp",
-  f+"e71ba472d74043a382f346daab323769-cc_ft_768.webp",
   f+"fbd49b075de14208ae02581387550540-cc_ft_384.webp"
 ];
 
+// Update gallery heading with actual count
+document.getElementById('gallery-heading').textContent = 'Photo gallery — ' + photos.length + ' photos';
+
 let current = 0;
 const grid = document.getElementById('gallery');
+let loadedCount = 0;
+
 photos.forEach((src, i) => {
   const img = document.createElement('img');
-  img.src = src; img.alt = 'Photo ' + (i+1);
+  img.src = src;
+  img.alt = 'Photo ' + (i + 1);
+  img.loading = 'lazy';
   img.onclick = () => openLightbox(i);
+  // Track load errors — if many fail, images are missing from repo
+  img.onerror = () => { img.style.display = 'none'; };
   grid.appendChild(img);
 });
+
 function openLightbox(i) {
   current = i;
   document.getElementById('lb-img').src = photos[i];
-  document.getElementById('lb-count').textContent = (i+1) + ' / ' + photos.length;
+  document.getElementById('lb-count').textContent = (i + 1) + ' / ' + photos.length;
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -211,14 +248,29 @@ function closeLightbox() {
 function changePhoto(dir) {
   current = (current + dir + photos.length) % photos.length;
   document.getElementById('lb-img').src = photos[current];
-  document.getElementById('lb-count').textContent = (current+1) + ' / ' + photos.length;
+  document.getElementById('lb-count').textContent = (current + 1) + ' / ' + photos.length;
 }
-document.getElementById('lightbox').addEventListener('click', e => { if(e.target === document.getElementById('lightbox')) closeLightbox(); });
+
+// Keyboard navigation
 document.addEventListener('keydown', e => {
   if (!document.getElementById('lightbox').classList.contains('open')) return;
-  if (e.key==='ArrowRight') changePhoto(1);
-  if (e.key==='ArrowLeft') changePhoto(-1);
-  if (e.key==='Escape') closeLightbox();
+  if (e.key === 'ArrowRight') changePhoto(1);
+  if (e.key === 'ArrowLeft') changePhoto(-1);
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// Close on backdrop click
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+});
+
+// Mobile swipe support
+let touchStartX = 0;
+const lb = document.getElementById('lightbox');
+lb.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) changePhoto(dx < 0 ? 1 : -1);
 });
 </script>
 </body>
