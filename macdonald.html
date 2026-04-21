@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12750 Macdonald Drive · Ojai, CA · Sheryl Whipple · NextHome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --orange:#E8632A; --orange-dark:#B84E1E; --gray:#5F5E5A; --gray-dark:#2C2C2A; --sand:#F9F6F0; --text:#2C2C2A; --muted:#888780; --border:rgba(0,0,0,0.10); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; font-weight:300; color:var(--text); background:#fff; font-size:17px; line-height:1.7; }
+  nav { position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:62px; }
+  .nav-brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); }
+  .nh-badge { background:var(--orange); color:#fff; font-size:10px; font-weight:500; letter-spacing:0.08em; padding:3px 7px; border-radius:3px; text-transform:uppercase; }
+  .site-name { font-family:'Playfair Display',serif; font-size:1.15rem; }
+  .nav-back { font-size:0.85rem; color:var(--muted); text-decoration:none; }
+  .nav-back:hover { color:var(--orange); }
+  .hero-img { width:100%; height:55vh; min-height:380px; overflow:hidden; position:relative; }
+  .hero-img img { width:100%; height:100%; object-fit:cover; }
+  .price-badge { position:absolute; bottom:2rem; left:2rem; background:rgba(0,0,0,0.72); color:#fff; font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:600; padding:0.6rem 1.2rem; border-radius:6px; }
+  .status-badge { position:absolute; top:2rem; left:2rem; background:#2D7A4F; color:#fff; font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; padding:5px 12px; border-radius:4px; }
+  .container { max-width:1000px; margin:0 auto; padding:0 2rem; }
+  .detail-grid { display:grid; grid-template-columns:1fr 300px; gap:3rem; padding:3rem 0; }
+  @media(max-width:720px){ .detail-grid { grid-template-columns:1fr; } }
+  .property-address { font-size:0.85rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem; }
+  .property-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.4rem); font-weight:600; line-height:1.2; color:var(--gray-dark); margin-bottom:1.5rem; }
+  .property-stats { display:flex; gap:1.5rem; flex-wrap:wrap; padding:1.25rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin-bottom:2rem; }
+  .stat .val { display:block; font-size:1.2rem; font-weight:500; color:var(--gray-dark); }
+  .stat .lbl { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; }
+  .section-title { font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:600; color:var(--gray-dark); margin:2rem 0 0.75rem; }
+  .description { color:var(--gray); font-size:0.95rem; line-height:1.8; margin-bottom:0.75rem; }
+  .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.4rem; margin-top:0.75rem; }
+  .feature { font-size:0.88rem; color:var(--gray); padding:0.3rem 0; border-bottom:1px solid var(--border); }
+  .feature::before { content:'✓ '; color:var(--orange); font-weight:500; }
+  .sidebar { position:sticky; top:82px; align-self:start; }
+  .contact-card { background:var(--sand); border-radius:10px; padding:1.5rem; }
+  .contact-card .price { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:600; color:var(--gray-dark); margin-bottom:0.25rem; }
+  .contact-card .mls { font-size:0.78rem; color:var(--muted); margin-bottom:1.25rem; }
+  .agent-row { display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem; padding-bottom:1.25rem; border-bottom:1px solid var(--border); }
+  .agent-row img { width:48px; height:48px; border-radius:50%; object-fit:cover; object-position:center top; }
+  .agent-row .name { font-weight:500; font-size:0.9rem; }
+  .agent-row .title { font-size:0.78rem; color:var(--muted); }
+  .btn-primary { display:block; width:100%; background:var(--orange); color:#fff; border:none; padding:0.85rem; border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; text-align:center; text-decoration:none; transition:background 0.2s; margin-bottom:0.75rem; cursor:pointer; }
+  .btn-primary:hover { background:var(--orange-dark); }
+  .btn-secondary { display:block; width:100%; background:transparent; color:var(--gray-dark); border:1px solid rgba(0,0,0,0.2); padding:0.85rem; border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; text-align:center; text-decoration:none; transition:border-color 0.2s; }
+  .btn-secondary:hover { border-color:var(--orange); color:var(--orange); }
+  .disclaimer { font-size:0.72rem; color:var(--muted); line-height:1.5; margin-top:1rem; }
+  .gallery-section { padding:2rem 0 4rem; }
+  .gallery-section h2 { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:600; color:var(--gray-dark); margin-bottom:1.25rem; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0.75rem; }
+  .gallery-grid img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; cursor:pointer; transition:opacity 0.2s,transform 0.2s; }
+  .gallery-grid img:hover { opacity:0.88; transform:scale(1.01); }
+  .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:1000; align-items:center; justify-content:center; }
+  .lightbox.open { display:flex; }
+  .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; border-radius:4px; }
+  .lb-close { position:absolute; top:1.5rem; right:1.5rem; color:#fff; font-size:2.5rem; cursor:pointer; background:none; border:none; line-height:1; }
+  .lb-prev,.lb-next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:2rem; cursor:pointer; padding:0.75rem 1rem; border-radius:4px; }
+  .lb-prev:hover,.lb-next:hover { background:rgba(255,255,255,0.3); }
+  .lb-prev { left:1rem; }
+  .lb-next { right:1rem; }
+  .lb-count { position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.6); font-size:0.85rem; }
+  footer { background:var(--gray-dark); color:rgba(255,255,255,0.5); padding:2rem; text-align:center; font-size:0.82rem; }
+  footer a { color:rgba(255,255,255,0.5); text-decoration:none; margin:0 0.75rem; }
+  footer a:hover { color:var(--orange); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <span class="site-name">Ojai Homes</span>
+    <span class="nh-badge">NextHome</span>
+  </a>
+  <a class="nav-back" href="index.html#listings">← Back to listings</a>
+</nav>
+
+<div class="hero-img">
+  <img src="images/macdonald-main.webp" alt="12750 Macdonald Drive">
+  <span class="status-badge">Active</span>
+  <span class="price-badge">$3,575,000</span>
+</div>
+
+<div class="container">
+  <div class="detail-grid">
+    <div>
+      <p class="property-address">Rancho Matilija · Ojai, CA 93023</p>
+      <h1 class="property-title">12750 Macdonald Drive</h1>
+      <div class="property-stats">
+        <div class="stat"><span class="val">5</span><span class="lbl">Bedrooms</span></div>
+        <div class="stat"><span class="val">3.5</span><span class="lbl">Bathrooms</span></div>
+        <div class="stat"><span class="val">4,244</span><span class="lbl">Sq Ft</span></div>
+        <div class="stat"><span class="val">2.1</span><span class="lbl">Acres</span></div>
+        <div class="stat"><span class="val">$883</span><span class="lbl">Per Sq Ft</span></div>
+      </div>
+      <h2 class="section-title">About this property</h2>
+      <p class="description">Designed by renowned architect Braden Sterling, this timeless French Provincial estate blends refined craftsmanship with the serenity of wide-open Ojai Valley landscapes. Set on 2.1 private usable acres with unobstructed panoramic views of the iconic Topa Topa Mountains, this 4,244 sq ft residence offers five bedrooms, four bathrooms, and every amenity for luxurious indoor-outdoor living.</p>
+      <p class="description">French doors line the back of the home, opening to a resort-style backyard complete with a sparkling swimming pool, adjoining spa, and cozy fire pit — all framed by rose gardens, raised vegetable beds, and an orchard of mature fruit trees. The property also features two outbuildings, each with a retractable roof, ideal for creative pursuits or flexible workspaces.</p>
+      <p class="description">With room for horses and direct access to the Ojai River Preserve trails and Los Padres National Forest, this is true California living at its finest. Inside, the open, light-filled floorplan showcases high beamed ceilings, tile and hardwood flooring throughout, and a welcoming character at every turn. Quiet, private, and perfectly positioned to capture sunrise and sunset views — a rare opportunity to own a piece of Ojai serenity.</p>
+      <h2 class="section-title">Property highlights</h2>
+      <div class="features-grid">
+        <div class="feature">French Provincial architecture</div>
+        <div class="feature">Panoramic Topa Topa views</div>
+        <div class="feature">Resort-style pool &amp; spa</div>
+        <div class="feature">Fire pit &amp; rose gardens</div>
+        <div class="feature">Mature fruit tree orchard</div>
+        <div class="feature">Two outbuildings w/ retractable roofs</div>
+        <div class="feature">Private well</div>
+        <div class="feature">Slate roof</div>
+        <div class="feature">High beamed ceilings</div>
+        <div class="feature">Hardwood &amp; tile floors</div>
+        <div class="feature">Room for horses</div>
+        <div class="feature">Los Padres trail access</div>
+        <div class="feature">Central air &amp; heat — zoned</div>
+        <div class="feature">Raised vegetable beds</div>
+      </div>
+      <h2 class="section-title">Schools</h2>
+      <p class="description">Miramonte Elementary · Nordhoff High School · Ojai Unified School District</p>
+      <h2 class="section-title">Listing details</h2>
+      <p class="description">MLS# V1-33494 · Style: French Provincial · Single Family Home · Listed by Sheryl Whipple, NextHome Pacific Coast Realty · CalDRE #01379424</p>
+    </div>
+
+    <div class="sidebar">
+      <div class="contact-card">
+        <div class="price">$3,575,000</div>
+        <div class="mls">MLS# V1-33494 · Active</div>
+        <div class="agent-row">
+          <img src="images/sheryl.jpg" alt="Sheryl Whipple">
+          <div>
+            <div class="name">Sheryl Whipple</div>
+            <div class="title">NextHome Pacific Coast Realty</div>
+          </div>
+        </div>
+        <a href="tel:+18059017546" class="btn-primary">Call (805) 901-7546</a>
+        <a href="index.html#contact" class="btn-secondary">Send a message</a>
+        <p class="disclaimer">All information deemed reliable but not guaranteed. Buyer to verify all details. CalDRE #01379424</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--sand); padding:0.5rem 0;">
+  <div class="container">
+    <div class="gallery-section">
+      <h2>Photo gallery — 45 photos</h2>
+      <div class="gallery-grid" id="gallery"></div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">×</button>
+  <button class="lb-prev" onclick="changePhoto(-1)">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-next" onclick="changePhoto(1)">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
+<footer>
+  <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:#fff; margin-bottom:0.5rem;">Ojai Homes</div>
+  <a href="index.html">Home</a>
+  <a href="index.html#listings">Listings</a>
+  <a href="index.html#contact">Contact Sheryl</a>
+  <div style="margin-top:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25);">© 2026 Ojai Homes · NextHome Pacific Coast Realty</div>
+</footer>
+
+<script>
+const f = "images/12750 Macdonald Drive/";
+const photos = [
+  "images/macdonald-main.webp",
+  f+"03ad110dc29cdbc30ddd33801bdc08ac-cc_ft_768.webp",
+  f+"0975bc4295b28048be8e57ee1c92be02-cc_ft_384.webp",
+  f+"0d9e5f8967b6b1a9ec9bb080e3a7f3cd-cc_ft_384.webp",
+  f+"258ff7574cbcabf4dd30e67fee05b5fa-cc_ft_768.webp",
+  f+"26a3058b67f25c59e97026cf531c8604-cc_ft_384.webp",
+  f+"43f1c98b1285c2f0c66662c5ef4bcb90-cc_ft_384.webp",
+  f+"4e6d0c9a8ff52dd5252b5d0de9d0eca4-cc_ft_384.webp",
+  f+"4e74dd026a8f8c603ead3827cd45ea18-cc_ft_768.webp",
+  f+"528485ab24ad6753049b27c993dc37c6-cc_ft_384.webp",
+  f+"5ba59332409ff9b7af3c9a2f804c8897-cc_ft_768 (1).webp",
+  f+"5ba59332409ff9b7af3c9a2f804c8897-cc_ft_768.webp",
+  f+"60b9b303ea95547a1ff0a796b4522059-cc_ft_768.webp",
+  f+"639ad1dd75122d3a2fa088c0ddc2c64d-cc_ft_384.webp",
+  f+"6475a6131c332d165e8e3dec13451ef1-cc_ft_384.webp",
+  f+"65d5d33ee69279f24efe8e298b600250-cc_ft_768.webp",
+  f+"6a16bf993ab9bac6e069bbffa9ebb4d0-cc_ft_384.webp",
+  f+"6abc49d5b805e04196ee1a3f4bfb47fc-cc_ft_384.webp",
+  f+"7067ecc6b764c4d743790a1211a3ff97-cc_ft_384.webp",
+  f+"717ed41fa7edda36305bf31314f5b79d-cc_ft_768.webp",
+  f+"71dee5ffccf5128cb0da5211c2c88766-cc_ft_384.webp",
+  f+"795e08ba0d02c1b2ac9e02a6e4a49a1d-cc_ft_384.webp",
+  f+"7e7e56cd884814ee9b741e385ca14131-cc_ft_384.webp",
+  f+"801f95308147c0c8b03abfaa5085380e-cc_ft_384.webp",
+  f+"80276bc556fb3bf1e7ef546f8566a891-cc_ft_768.webp",
+  f+"834bd2b116be9862eba2057fb56490da-cc_ft_384.webp",
+  f+"86d08b24525d27fa06f8605d6fe4dc56-cc_ft_768.webp",
+  f+"88ad686a84f0a0c2f92f4c339436b28a-cc_ft_384.webp",
+  f+"8a4b97d9801d5b8acaf3f084a348ceea-cc_ft_384.webp",
+  f+"9b3c601e6648b75852ea166cd2f600d9-cc_ft_384.webp",
+  f+"9c3ef6e643041cc50921c18524066e6c-cc_ft_384.webp",
+  f+"9db6e2f33cf55848512e7027cc341b3f-cc_ft_384.webp",
+  f+"a878b4726ec599e4cc7059a1869d6cfe-cc_ft_768.webp",
+  f+"acf373b7fc24b12c9776fd1d7cd48f6b-cc_ft_384.webp",
+  f+"ad64234986ae7d9b2ae9e45ae452d8ea-cc_ft_384.webp",
+  f+"b0169b9dd1f46722d22fb1d670f1649a-cc_ft_384.webp",
+  f+"b3f2f8b54438d3b61fea40f6d3bd7084-cc_ft_384.webp",
+  f+"c0875422e7ad25d8676b1fed4c0ed276-cc_ft_384.webp",
+  f+"c0e9a68f1c8c3af3e7910b096aef84d2-cc_ft_384.webp",
+  f+"c90f0e452f94ca4d441d080c1bd19261-cc_ft_384.webp",
+  f+"ca69813c787ba6bec4c699571923aa88-cc_ft_768.webp",
+  f+"d0e1d6a695a676efbaba7bdb65bafdc0-cc_ft_384.webp",
+  f+"d722d961c140a1c6bbf2e801d2f18d78-cc_ft_768.webp",
+  f+"ead9ee0fc73d95e212945e271cb9dbf4-cc_ft_768.webp",
+  f+"f3803f94000c8648a198880432132b90-cc_ft_768.webp",
+  f+"f948189a33549ef54d90781744c9c99a-cc_ft_384.webp"
+];
+
+let current = 0;
+const grid = document.getElementById('gallery');
+photos.forEach((src, i) => {
+  const img = document.createElement('img');
+  img.src = src; img.alt = 'Photo ' + (i+1);
+  img.onclick = () => openLightbox(i);
+  grid.appendChild(img);
+});
+function openLightbox(i) {
+  current = i;
+  document.getElementById('lb-img').src = photos[i];
+  document.getElementById('lb-count').textContent = (i+1) + ' / ' + photos.length;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function changePhoto(dir) {
+  current = (current + dir + photos.length) % photos.length;
+  document.getElementById('lb-img').src = photos[current];
+  document.getElementById('lb-count').textContent = (current+1) + ' / ' + photos.length;
+}
+document.getElementById('lightbox').addEventListener('click', e => { if(e.target === document.getElementById('lightbox')) closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key==='ArrowRight') changePhoto(1);
+  if (e.key==='ArrowLeft') changePhoto(-1);
+  if (e.key==='Escape') closeLightbox();
+});
+</script>
+</body>
+</html>
