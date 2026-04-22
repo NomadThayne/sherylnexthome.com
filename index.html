@@ -32,7 +32,9 @@
     display: flex; align-items: center; justify-content: space-between; height: 62px;
   }
   .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
-  .nav-brand .nh-badge { background: var(--orange); color: #fff; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 3px; text-transform: uppercase; }
+  .nav-brand .nh-badge { display: none; }
+  .nav-nh-logo { height: 30px; width: auto; display: block; }
+  .nh-luke { height: 36px; width: auto; display: inline-block; vertical-align: middle; filter: brightness(0) invert(1); opacity: 0.7; }
   .nav-brand .site-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; letter-spacing: -0.01em; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { text-decoration: none; color: var(--gray); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
@@ -188,8 +190,8 @@
 <!-- NAV -->
 <nav>
   <a class="nav-brand" href="index.html">
+    <img src="images/NH_Logo.png" alt="NextHome" class="nav-nh-logo">
     <span class="site-name">Ojai Homes</span>
-    <span class="nh-badge">NextHome</span>
   </a>
   <ul class="nav-links">
     <li><a href="#listings">Listings</a></li>
@@ -275,7 +277,7 @@
           </div>
           <p class="listing-desc">Charming single-family home on one of Ojai's most beloved streets, in the heart of the East End. Close to the Ojai Valley Trail, downtown, and surrounded by the natural beauty that defines the valley.</p>
           <div class="listing-price">$1,970,000</div>
-          <div class="listing-avail">Active · NextHome Pacific Coast Realty</div>
+          <div class="listing-avail">Active · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:var(--muted); text-decoration:none;">NextHome Pacific Coast Realty</a></div>
           <a class="listing-link" href="mcnell.html">View photos &amp; details →</a>
         </div>
       </div>
@@ -433,7 +435,10 @@
           <a href="#contact">Send a message</a>
         </div>
         <div class="nh-logo-block">
-          <div class="nh-name">NextHome Pacific Coast Realty</div>
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+            <img src="images/NH_Logo.png" alt="NextHome" style="height:40px; width:auto; filter:brightness(0) invert(1); opacity:0.85;">
+            <div class="nh-name"><a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">NextHome Pacific Coast Realty</a></div>
+          </div>
           <div class="nh-logo-text">307 A East Matilija St · Ojai, CA 93023 · Office: (805) 646-6768</div>
           <div class="nh-logo-text">CalDRE #01379424 · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener">nexthomepacificcoastrealty.com</a></div>
         </div>
@@ -511,8 +516,11 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">Ojai Homes</div>
-  <div style="font-size:0.82rem; margin-bottom:0.5rem;">A NextHome neighborhood resource · Ojai Valley, CA 93023</div>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+    <img src="images/NH_Luke.png" alt="NextHome mascot" class="nh-luke">
+    <div class="footer-brand">Ojai Homes</div>
+  </div>
+  <div style="font-size:0.82rem; margin-bottom:0.5rem;">A <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5); text-decoration:none;">NextHome Pacific Coast Realty</a> neighborhood resource · Ojai Valley, CA 93023</div>
   <nav>
     <a href="#listings">Listings</a>
     <a href="#neighborhood">Neighborhood</a>
@@ -520,7 +528,7 @@
     <a href="#agent">Sheryl</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="footer-note">Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with NextHome Pacific Coast Realty · 307 A East Matilija St · Ojai, CA 93023. This site is an independent neighborhood resource for buyers and sellers in the Ojai Valley.</div>
+  <div class="footer-note">Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4); text-decoration:none;">NextHome Pacific Coast Realty</a> · 307 A East Matilija St · Ojai, CA 93023. This site is an independent neighborhood resource for buyers and sellers in the Ojai Valley.</div>
   <div style="margin-top:1.5rem; font-size:0.75rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · NextHome Pacific Coast Realty · All rights reserved</div>
 </footer>
 

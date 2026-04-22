@@ -14,7 +14,8 @@
   body { font-family:'DM Sans',sans-serif; font-weight:300; color:var(--text); background:#fff; font-size:17px; line-height:1.7; }
   nav { position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:62px; }
   .nav-brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); }
-  .nh-badge { background:var(--orange); color:#fff; font-size:10px; font-weight:500; letter-spacing:0.08em; padding:3px 7px; border-radius:3px; text-transform:uppercase; }
+  .nh-badge { display:none; }
+  .nav-nh-logo { height:30px; width:auto; display:block; }
   .site-name { font-family:'Playfair Display',serif; font-size:1.15rem; }
   .nav-back { font-size:0.85rem; color:var(--muted); text-decoration:none; }
   .nav-back:hover { color:var(--orange); }
@@ -83,8 +84,8 @@
 
 <nav>
   <a class="nav-brand" href="index.html">
+    <img src="images/NH_Logo.png" alt="NextHome" class="nav-nh-logo">
     <span class="site-name">Ojai Homes</span>
-    <span class="nh-badge">NextHome</span>
   </a>
   <a class="nav-back" href="index.html#listings">← Back to listings</a>
 </nav>
@@ -144,14 +145,14 @@
     <div class="sidebar">
       <div class="contact-card">
         <div class="price">$3,575,000</div>
-        <div class="status-line">Active · NextHome Pacific Coast Realty</div>
+        <div class="status-line">Active · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">NextHome Pacific Coast Realty</a></div>
         <div class="mls-line">MLS# V1-33494</div>
         <div class="agent-row">
           <img src="images/sheryl.jpg" alt="Sheryl Whipple"
                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 48 48%22><circle cx=%2224%22 cy=%2224%22 r=%2224%22 fill=%22%23ddd%22/><text x=%2224%22 y=%2230%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%22%23888%22>SW</text></svg>'">
           <div>
             <div class="name">Sheryl Whipple</div>
-            <div class="title">NextHome Pacific Coast Realty</div>
+            <div class="title"><a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">NextHome Pacific Coast Realty</a></div>
           </div>
         </div>
         <a href="tel:+18059017546" class="btn-primary">Call (805) 901-7546</a>
@@ -180,11 +181,14 @@
 </div>
 
 <footer>
-  <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:#fff; margin-bottom:0.5rem;">Ojai Homes</div>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+    <img src="images/NH_Luke.png" alt="NextHome" style="height:36px; width:auto; filter:brightness(0) invert(1); opacity:0.7;">
+    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:#fff;">Ojai Homes</div>
+  </div>
   <a href="index.html">Home</a>
   <a href="index.html#listings">Listings</a>
   <a href="index.html#contact">Contact Sheryl</a>
-  <div style="margin-top:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · NextHome Pacific Coast Realty</div>
+  <div style="margin-top:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.25); text-decoration:none;">NextHome Pacific Coast Realty</a></div>
 </footer>
 
 <script>
