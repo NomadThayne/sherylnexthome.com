@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sold Listings · Sheryl Whipple · NextHome Pacific Coast Realty</title>
+  <meta name="description" content="Recent home sales by Sheryl Whipple in the Ojai Valley — buyer and seller representation. NextHome Pacific Coast Realty, Ojai, CA." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ojai Homes · Sheryl Whipple" />
+  <meta property="og:url" content="https://sherylnexthome.com/sold.html" />
+  <meta property="og:title" content="Sold Listings · Sheryl Whipple · Ojai Valley" />
+  <meta property="og:description" content="Recent home sales by Sheryl Whipple in the Ojai Valley — buyer and seller representation." />
+  <meta property="og:image" content="https://sherylnexthome.com/images/new/PXL_20251007_015010405.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sold Listings · Sheryl Whipple · Ojai Valley" />
+  <meta name="twitter:description" content="Recent home sales by Sheryl Whipple in the Ojai Valley." />
+  <meta name="twitter:image" content="https://sherylnexthome.com/images/new/PXL_20251007_015010405.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Two additional badge colors — everything else reuses existing .badge styles */
+    .badge-sold  { background: #2a7a5a; }
+    .badge-buyer { background: #185fa5; }
+
+    /* Placeholder for cards with no photo yet */
+    .card-img-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #f0ebe4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .placeholder-address {
+      font-size: 0.8rem;
+      color: #aaa;
+      letter-spacing: 0.03em;
+    }
+
+    /* Sold-specific status line under price */
+    .card-status {
+      font-size: 0.78rem;
+      color: #888;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV — identical to index.html with Sold link added -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">
+        <img src="images/NH_Logo.png" alt="NextHome" />
+        Ojai Homes
+      </a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#listings">Listings</a></li>
+        <li><a href="sold.html">Sold</a></li>
+        <li><a href="index.html#neighborhood">Neighborhood</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html#agent">Your Agent</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="back-link-wrap">
+    <a href="index.html" class="back-link">← Back to home</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="listings-header">
+    <p class="section-eyebrow">Past Sales</p>
+    <h2 class="section-title">Homes Sheryl Has <em>Sold</em></h2>
+    <p class="section-intro">
+      A selection of homes Sheryl has represented — as listing agent for sellers
+      and as buyer's agent helping clients find their place in the valley.
+    </p>
+  </section>
+
+  <!-- SOLD CARDS — same markup pattern as listings grid on index.html -->
+  <section class="listings-grid" id="sold">
+
+    <!-- 1340 Grand Ave -->
+    <article class="listing-card">
+      <div class="card-img-wrap">
+        <div class="card-badge badge-sold">Sold</div>
+        <div class="card-img-placeholder">
+          <span class="placeholder-address">1340 Grand Ave · photo coming</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">1340 Grand Ave</h2>
+        <p class="card-location">Ojai, CA 93023</p>
+        <p class="card-meta">3 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,700 sq ft &nbsp;·&nbsp; 0.53 acres</p>
+        <p class="card-desc">Ranch-style home with mountain views, remodeled kitchen, and mature orchard on over half an acre in the heart of Ojai.</p>
+        <p class="card-price">$1,480,000</p>
+        <p class="card-status">Sold Sep 2022 &nbsp;·&nbsp; Seller representation</p>
+      </div>
+    </article>
+
+    <!-- 325 Descanso Ave -->
+    <article class="listing-card">
+      <div class="card-img-wrap">
+        <div class="card-badge badge-sold">Sold</div>
+        <div class="card-img-placeholder">
+          <span class="placeholder-address">325 Descanso Ave · photo coming</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">325 Descanso Ave</h2>
+        <p class="card-location">Ojai, CA 93023</p>
+        <p class="card-meta">4 bed &nbsp;·&nbsp; 3 bath &nbsp;·&nbsp; 2,163 sq ft &nbsp;·&nbsp; 9,108 sq ft lot</p>
+        <p class="card-desc">Spacious home with high beamed ceilings, open floor plan, and granite kitchen — close to Los Padres trailheads.</p>
+        <p class="card-price">$1,190,000</p>
+        <p class="card-status">Sold Apr 2023 &nbsp;·&nbsp; Seller representation</p>
+      </div>
+    </article>
+
+    <!-- 1119 Mariano Dr -->
+    <article class="listing-card">
+      <div class="card-img-wrap">
+        <div class="card-badge badge-sold">Sold</div>
+        <div class="card-img-placeholder">
+          <span class="placeholder-address">1119 Mariano Dr · photo coming</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">1119 Mariano Dr</h2>
+        <p class="card-location">Ojai, CA 93023</p>
+        <p class="card-meta">4 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,311 sq ft &nbsp;·&nbsp; 9,751 sq ft lot</p>
+        <p class="card-desc">Beloved ranch home on a quiet cul-de-sac in Mira Monte — oak shade, avocado and fruit trees, private pergola.</p>
+        <p class="card-price">$950,000</p>
+        <p class="card-status">Sold Feb 2022 &nbsp;·&nbsp; Seller representation</p>
+      </div>
+    </article>
+
+    <!-- 330 N La Luna Ave -->
+    <article class="listing-card">
+      <div class="card-img-wrap">
+        <div class="card-badge badge-sold">Sold</div>
+        <div class="card-img-placeholder">
+          <span class="placeholder-address">330 N La Luna Ave · photo coming</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">330 N La Luna Ave</h2>
+        <p class="card-location">Meiners Oaks · Ojai, CA 93023</p>
+        <p class="card-meta">3 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,210 sq ft &nbsp;·&nbsp; 13,265 sq ft lot</p>
+        <p class="card-desc">Charming double-lot home with hardwood floors, updated kitchen, koi pond, raised garden beds, and a detached studio.</p>
+        <p class="card-price">$805,000</p>
+        <p class="card-status">Sold Jun 2021 &nbsp;·&nbsp; Seller representation</p>
+      </div>
+    </article>
+
+    <!-- 2175 Valley Meadow Dr -->
+    <article class="listing-card">
+      <div class="card-img-wrap">
+        <div class="card-badge badge-buyer">Buyer Rep</div>
+        <div class="card-img-placeholder">
+          <span class="placeholder-address">2175 Valley Meadow Dr · photo coming</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">2175 Valley Meadow Dr</h2>
+        <p class="card-location">Oak View, CA 93022</p>
+        <p class="card-meta">4 bed &nbsp;·&nbsp; 2.5 bath &nbsp;·&nbsp; 2,457 sq ft &nbsp;·&nbsp; 1.25 acres</p>
+        <p class="card-desc">Private creekside property with Brazilian cherrywood floors, solar, horse facilities, mature fruit trees, and views from every room.</p>
+        <p class="card-price">$1,250,000</p>
+        <p class="card-status">Sold Nov 2021 &nbsp;·&nbsp; Buyer representation</p>
+      </div>
+    </article>
+
+    <!-- CTA card — matches "Your property here" on index.html -->
+    <article class="listing-card listing-card-cta">
+      <div class="card-img-wrap cta-img-wrap">
+        <span class="cta-icon">🏠</span>
+      </div>
+      <div class="card-body">
+        <h2 class="card-address">Your home here</h2>
+        <p class="card-location">Ojai Valley · Ventura County</p>
+        <p class="card-desc">Selling or buying in Ojai? Sheryl brings 25 years of local roots, deep market knowledge, and a personal approach — on both sides of the table.</p>
+        <a href="index.html#contact" class="card-link">Contact Sheryl →</a>
+      </div>
+    </article>
+
+  </section>
+
+  <p class="listings-disclaimer">
+    Sale prices and dates sourced from public MLS records. All information deemed reliable but not guaranteed.
+    Buyer to verify all details. Sheryl Whipple, CalDRE #01379424, NextHome Pacific Coast Realty.
+  </p>
+
+  <!-- FOOTER — identical to index.html -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/NH_Luke.png" alt="NextHome" class="footer-mascot" />
+        <p class="footer-brand-name">Ojai Homes</p>
+        <p class="footer-tagline">
+          A <a href="https://www.nexthomepacificcoastrealty.com">NextHome Pacific Coast Realty</a>
+          neighborhood resource · Ojai Valley, CA 93023
+        </p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html#listings">Listings</a>
+        <a href="sold.html">Sold</a>
+        <a href="index.html#neighborhood">Neighborhood</a>
+        <a href="index.html#about">About Ojai</a>
+        <a href="index.html#agent">Sheryl</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-legal">
+        Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with
+        <a href="https://www.nexthomepacificcoastrealty.com">NextHome Pacific Coast Realty</a>
+        · 307 A East Matilija St · Ojai, CA 93023. This site is an independent neighborhood resource
+        for buyers and sellers in the Ojai Valley.
+      </p>
+      <p class="footer-copy">© 2026 Sheryl Whipple · NextHome Pacific Coast Realty · All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>
