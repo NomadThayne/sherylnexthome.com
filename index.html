@@ -32,7 +32,6 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; font-weight: 300; color: var(--text); background: #fff; font-size: 17px; line-height: 1.7; }
 
-  /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100; background: #fff;
     border-bottom: 1px solid var(--border); padding: 0 2rem;
@@ -47,7 +46,6 @@
   .nav-links a { text-decoration: none; color: var(--gray); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--orange); }
 
-  /* Mobile nav */
   .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
   .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--gray-dark); border-radius: 2px; transition: all 0.2s; }
   .mobile-menu { display: none; position: fixed; inset: 62px 0 0 0; background: #fff; z-index: 99; flex-direction: column; padding: 2rem; gap: 0; border-top: 1px solid var(--border); }
@@ -59,7 +57,6 @@
     .nav-hamburger { display: flex; }
   }
 
-  /* HERO */
   .hero {
     background: var(--sand) url('images/new/PXL_20260322_021907644.jpg') center center / cover no-repeat;
     padding: 6rem 2rem 5rem; text-align: center; position: relative; overflow: hidden;
@@ -80,7 +77,6 @@
   .hero-stat .val { display: block; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 600; color: var(--gray-dark); }
   .hero-stat .lbl { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
 
-  /* SECTIONS */
   section { padding: 5rem 2rem; }
   .container { max-width: 960px; margin: 0 auto; }
   .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
@@ -88,7 +84,6 @@
   .section-title em { font-style: italic; color: var(--orange); }
   .section-intro { color: var(--gray); max-width: 560px; margin-bottom: 3rem; }
 
-  /* LISTINGS */
   #listings { background: #fff; }
   .listings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
   .listing-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
@@ -110,13 +105,6 @@
   .listing-link { display: inline-block; font-size: 0.85rem; font-weight: 500; color: var(--orange); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
   .listing-link:hover { border-color: var(--orange); }
 
-  /* DISTANCE STRIP */
-  .distance-strip { background: var(--sand); padding: 2rem; border-radius: 10px; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 3rem; }
-  .dist-item { text-align: center; }
-  .dist-val { display: block; font-size: 1.1rem; font-weight: 500; color: var(--gray-dark); }
-  .dist-lbl { font-size: 0.75rem; color: var(--muted); }
-
-  /* NEIGHBORHOOD */
   #neighborhood { background: var(--sand); }
   .hood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   @media (max-width: 640px) { .hood-grid { grid-template-columns: 1fr; } }
@@ -130,7 +118,6 @@
   .hood-photo { border-radius: 8px; height: 200px; overflow: hidden; }
   .hood-photo img { width: 100%; height: 100%; object-fit: cover; }
 
-  /* ABOUT */
   #about { background: #fff; }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
@@ -142,12 +129,10 @@
   .about-photo { border-radius: 8px; overflow: hidden; }
   .about-photo img { width: 100%; height: 100%; object-fit: cover; }
 
-  /* AGENT */
   #agent { background: var(--gray-dark); color: #fff; padding: 5rem 2rem; }
   #agent .section-label { color: var(--orange); }
   .agent-grid { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: start; }
   @media (max-width: 640px) { .agent-grid { grid-template-columns: 1fr; } }
-  .agent-photo { width: 180px; height: 220px; border-radius: 8px; object-fit: cover; object-position: center top; flex-shrink: 0; }
   .agent-info h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; margin-bottom: 0.4rem; }
   .agent-title { color: var(--orange); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.25rem; }
   .agent-bio { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.75rem; max-width: 480px; }
@@ -160,7 +145,6 @@
   .nh-logo-text a { color: rgba(255,255,255,0.4); text-decoration: none; }
   .nh-logo-text a:hover { color: var(--orange); }
 
-  /* CONTACT */
   #contact { background: var(--sand); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
   @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
@@ -181,7 +165,6 @@
   .contact-detail a:hover { text-decoration: underline; }
   .contact-detail span { font-size: 0.9rem; color: var(--gray); }
 
-  /* FOOTER */
   footer { background: var(--gray-dark); color: rgba(255,255,255,0.55); padding: 3rem 2rem; text-align: center; font-size: 0.85rem; }
   .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin-bottom: 0.5rem; }
   footer nav { background: transparent; border: none; position: static; height: auto; padding: 0; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0; display: flex; }
@@ -189,7 +172,6 @@
   footer nav a:hover { color: var(--orange); }
   .footer-note { margin-top: 1.5rem; font-size: 0.77rem; color: rgba(255,255,255,0.3); max-width: 520px; margin-left: auto; margin-right: auto; }
 
-  /* VIEWING MODAL */
   .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:200; align-items:center; justify-content:center; padding:1rem; }
   .modal-overlay.open { display:flex; }
   .modal { background:#fff; border-radius:12px; padding:2rem; width:100%; max-width:460px; position:relative; }
@@ -213,6 +195,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#listings">Listings</a></li>
+    <li><a href="sold.html">Sold</a></li>
     <li><a href="#neighborhood">Neighborhood</a></li>
     <li><a href="resources.html">Resources</a></li>
     <li><a href="#agent">Your Agent</a></li>
@@ -226,6 +209,7 @@
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="#listings" onclick="closeMobileMenu()">Listings</a>
+  <a href="sold.html" onclick="closeMobileMenu()">Sold</a>
   <a href="#neighborhood" onclick="closeMobileMenu()">Neighborhood</a>
   <a href="resources.html" onclick="closeMobileMenu()">Resources</a>
   <a href="#agent" onclick="closeMobileMenu()">Your Agent</a>
@@ -262,9 +246,7 @@
 
       <div class="listing-card">
         <div class="listing-img">
-          <img src="images/12750 Macdonald Drive/0d9e5f8967b6b1a9ec9bb080e3a7f3cd-cc_ft_384.webp"
-               alt="12750 Macdonald Drive"
-               onerror="this.parentElement.style.background='var(--gray-light)'">
+          <img src="images/12750 Macdonald Drive/0d9e5f8967b6b1a9ec9bb080e3a7f3cd-cc_ft_384.webp" alt="12750 Macdonald Drive" onerror="this.parentElement.style.background='var(--gray-light)'">
           <span class="listing-badge available">Active</span>
         </div>
         <div class="listing-body">
@@ -283,9 +265,7 @@
 
       <div class="listing-card">
         <div class="listing-img">
-          <img src="images/mcnell/e71ba472d74043a382f346daab323769-cc_ft_768.webp"
-               alt="757 McNell Road"
-               onerror="this.parentElement.style.background='var(--gray-light)'">
+          <img src="images/mcnell/e71ba472d74043a382f346daab323769-cc_ft_768.webp" alt="757 McNell Road" onerror="this.parentElement.style.background='var(--gray-light)'">
           <span class="listing-badge available">Active</span>
         </div>
         <div class="listing-body">
@@ -304,9 +284,7 @@
 
       <div class="listing-card">
         <div class="listing-img">
-          <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg"
-               alt="Ojai Valley rental properties"
-               onerror="this.parentElement.style.background='var(--gray-light)'">
+          <img src="images/daisies-dots-yWepVP7xCx4-unsplash.jpg" alt="Ojai Valley rental properties" onerror="this.parentElement.style.background='var(--gray-light)'">
           <span class="listing-badge rental">Rentals</span>
         </div>
         <div class="listing-body">
@@ -333,7 +311,6 @@
       </div>
 
     </div>
-
   </div>
 </section>
 
@@ -343,7 +320,6 @@
     <p class="section-label">Life in the Valley</p>
     <h2 class="section-title">The <em>Ojai</em> neighborhood</h2>
     <p class="section-intro">Tucked into a mountain valley east of Santa Barbara, Ojai is an intentional community — artsy, agricultural, and fiercely independent.</p>
-
     <div class="hood-grid">
       <div class="hood-column">
         <h3>Downtown &amp; Culture</h3>
@@ -393,14 +369,9 @@
         </ul>
       </div>
     </div>
-
     <div class="hood-photo-pair">
-      <div class="hood-photo">
-        <img src="images/new/PXL_20240420_153519941.jpg" alt="Stream in the Ojai hills">
-      </div>
-      <div class="hood-photo">
-        <img src="images/new/PXL_20251007_015010405.jpg" alt="Moonrise over Ojai citrus orchards">
-      </div>
+      <div class="hood-photo"><img src="images/new/PXL_20240420_153519941.jpg" alt="Stream in the Ojai hills"></div>
+      <div class="hood-photo"><img src="images/new/PXL_20251007_015010405.jpg" alt="Moonrise over Ojai citrus orchards"></div>
     </div>
   </div>
 </section>
@@ -424,12 +395,8 @@
       </div>
       <div>
         <div class="about-photos">
-          <div class="about-photo">
-            <img src="images/1280px-Ojai_Valley_Museum_2014_02.jpg" alt="Ojai Valley Museum">
-          </div>
-          <div class="about-photo">
-            <img src="images/new/ojai_downtown.jpg" alt="Downtown Ojai" style="object-position: center 40%;">
-          </div>
+          <div class="about-photo"><img src="images/1280px-Ojai_Valley_Museum_2014_02.jpg" alt="Ojai Valley Museum"></div>
+          <div class="about-photo"><img src="images/new/ojai_downtown.jpg" alt="Downtown Ojai" style="object-position: center 40%;"></div>
         </div>
       </div>
     </div>
@@ -442,9 +409,7 @@
     <p class="section-label">Your Local Expert</p>
     <div class="agent-grid">
       <div style="width:180px; height:220px; border-radius:8px; overflow:hidden; flex-shrink:0; background:var(--gray-dark);">
-        <img src="images/sheryl.jpg" alt="Sheryl Whipple, Realtor"
-             style="width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;"
-             onerror="this.style.background='#555';">
+        <img src="images/sheryl.jpg" alt="Sheryl Whipple, Realtor" style="width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;" onerror="this.style.background='#555';">
       </div>
       <div class="agent-info">
         <h2>Sheryl Whipple</h2>
@@ -470,22 +435,17 @@
       </div>
     </div>
     <div style="margin-top:2.5rem; border-radius:10px; overflow:hidden; height:280px;">
-      <img src="images/new/IMG_20220811_192753627.jpg" alt="Sheryl Whipple NextHome Pacific Coast Realty listing sign in Ojai"
-           style="width:100%; height:100%; object-fit:cover; object-position:center 30%;">
+      <img src="images/new/IMG_20220811_192753627.jpg" alt="Sheryl Whipple NextHome Pacific Coast Realty listing sign in Ojai" style="width:100%; height:100%; object-fit:cover; object-position:center 30%;">
     </div>
   </div>
 </section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <p class="section-label">Get in Touch</p>
     <h2 class="section-title">Inquire about <em>a home</em></h2>
-
     <div class="contact-grid">
-      <!--
-        Formspree handles form submission for static GitHub Pages sites.
-        Replace YOUR_FORM_ID below with the ID from your Formspree account (formspree.io).
-        It's free for up to 50 submissions/month and takes about 2 minutes to set up.
-      -->
       <form id="contact-form" action="https://formspree.io/f/xykldrob" method="POST">
         <div class="form-group">
           <label for="name">Your name</label>
@@ -515,33 +475,20 @@
           <textarea id="message" name="message" placeholder="Tell Sheryl what you're looking for…"></textarea>
         </div>
         <button class="submit-btn" type="submit" id="submit-btn">Send Message</button>
-        <div class="form-success" id="form-success">
-          ✓ Message sent! Sheryl will be in touch shortly.
-        </div>
+        <div class="form-success" id="form-success">✓ Message sent! Sheryl will be in touch shortly.</div>
       </form>
-
       <div class="contact-info">
         <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:600; margin-bottom:1rem;">Ready to find your place in the valley?</h3>
         <p>Whether you're buying, selling, or just exploring what Ojai has to offer — Sheryl is the right person to call. She responds to every inquiry personally, usually within a few hours.</p>
-        <div class="contact-detail">
-          <strong>Phone</strong>
-          <a href="tel:+18059017546">(805) 901-7546</a>
-        </div>
-        <div class="contact-detail">
-          <strong>Email</strong>
-          <a href="mailto:sherylw.realestate@gmail.com">sherylw.realestate@gmail.com</a>
-        </div>
-        <div class="contact-detail">
-          <strong>Office</strong>
-          <span>NextHome Pacific Coast Realty<br>307 A East Matilija St · Ojai, CA 93023<br>(805) 646-6768</span>
-        </div>
+        <div class="contact-detail"><strong>Phone</strong><a href="tel:+18059017546">(805) 901-7546</a></div>
+        <div class="contact-detail"><strong>Email</strong><a href="mailto:sherylw.realestate@gmail.com">sherylw.realestate@gmail.com</a></div>
+        <div class="contact-detail"><strong>Office</strong><span>NextHome Pacific Coast Realty<br>307 A East Matilija St · Ojai, CA 93023<br>(805) 646-6768</span></div>
         <p style="font-size:0.82rem; color:var(--muted); margin-top:1.5rem; line-height:1.6;">All property information is deemed reliable but not guaranteed. Buyer to verify. Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with NextHome Pacific Coast Realty, 307 A East Matilija St, Ojai CA 93023.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <!-- VIEWING MODAL -->
 <div class="modal-overlay" id="viewing-modal">
   <div class="modal">
@@ -550,32 +497,18 @@
     <div class="modal-sub" id="modal-sub">Contact Sheryl to arrange a time</div>
     <form id="viewing-form" action="https://formspree.io/f/mbdqprnn" method="POST">
       <input type="hidden" name="property" id="modal-property">
-      <div class="form-group">
-        <label for="v-name">Your name</label>
-        <input type="text" id="v-name" name="name" placeholder="Full name" required>
-      </div>
-      <div class="form-group">
-        <label for="v-email">Email</label>
-        <input type="email" id="v-email" name="email" placeholder="you@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="v-phone">Phone</label>
-        <input type="tel" id="v-phone" name="phone" placeholder="(805) 000-0000">
-      </div>
-      <div class="form-group">
-        <label for="v-date">Preferred date &amp; time</label>
-        <input type="text" id="v-date" name="preferred_date" placeholder="e.g. Weekday mornings, Saturday afternoon…">
-      </div>
-      <div class="form-group">
-        <label for="v-message">Anything else?</label>
-        <textarea id="v-message" name="message" style="min-height:70px;" placeholder="Any questions or notes for Sheryl…"></textarea>
-      </div>
+      <div class="form-group"><label for="v-name">Your name</label><input type="text" id="v-name" name="name" placeholder="Full name" required></div>
+      <div class="form-group"><label for="v-email">Email</label><input type="email" id="v-email" name="email" placeholder="you@example.com" required></div>
+      <div class="form-group"><label for="v-phone">Phone</label><input type="tel" id="v-phone" name="phone" placeholder="(805) 000-0000"></div>
+      <div class="form-group"><label for="v-date">Preferred date &amp; time</label><input type="text" id="v-date" name="preferred_date" placeholder="e.g. Weekday mornings, Saturday afternoon…"></div>
+      <div class="form-group"><label for="v-message">Anything else?</label><textarea id="v-message" name="message" style="min-height:70px;" placeholder="Any questions or notes for Sheryl…"></textarea></div>
       <button type="submit" class="submit-btn" id="viewing-submit">Request viewing</button>
       <div class="form-success" id="viewing-success">✓ Request sent! Sheryl will be in touch shortly.</div>
     </form>
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
     <img src="images/NH_Luke.png" alt="NextHome mascot" class="nh-luke">
@@ -584,6 +517,7 @@
   <div style="font-size:0.82rem; margin-bottom:0.5rem;">A <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5); text-decoration:none;">NextHome Pacific Coast Realty</a> neighborhood resource · Ojai Valley, CA 93023</div>
   <nav>
     <a href="#listings">Listings</a>
+    <a href="sold.html">Sold</a>
     <a href="#neighborhood">Neighborhood</a>
     <a href="#about">About Ojai</a>
     <a href="#agent">Sheryl</a>
@@ -594,65 +528,35 @@
 </footer>
 
 <script>
-  // Mobile nav toggle
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-  });
-  function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-  }
-  // Close mobile menu on outside click
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  function closeMobileMenu() { mobileMenu.classList.remove('open'); }
   document.addEventListener('click', e => {
-    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-      closeMobileMenu();
-    }
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMobileMenu();
   });
 
-  // Contact form — AJAX submission to Formspree
-  // After adding your Formspree ID above, this shows a success message without a page reload.
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
   const formSuccess = document.getElementById('form-success');
-
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    if (form.action.includes('YOUR_FORM_ID')) {
-      // Formspree not yet configured — show a helpful note in the console
-      console.warn('Contact form: replace YOUR_FORM_ID in the form action with your Formspree form ID. See formspree.io.');
-      formSuccess.textContent = '⚠ Form not yet configured. Please email Sheryl directly at sherylw.realestate@gmail.com';
-      formSuccess.style.background = '#FEF3E2';
-      formSuccess.style.borderColor = '#E8632A';
-      formSuccess.style.color = '#7a3a10';
-      formSuccess.classList.add('visible');
-      return;
-    }
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
     try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
       if (res.ok) {
         form.reset();
         formSuccess.textContent = '✓ Message sent! Sheryl will be in touch shortly.';
         formSuccess.style.cssText = '';
         formSuccess.classList.add('visible');
         submitBtn.style.display = 'none';
-      } else {
-        throw new Error('Server error');
-      }
+      } else { throw new Error(); }
     } catch {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+      submitBtn.disabled = false; submitBtn.textContent = 'Send Message';
       alert('Something went wrong. Please email Sheryl directly at sherylw.realestate@gmail.com');
     }
   });
 
-  // Viewing modal
   function openViewingModal(property, mls) {
     document.getElementById('modal-property').value = property;
     document.getElementById('modal-sub').textContent = mls ? property + ' · ' + mls : property;
@@ -675,11 +579,7 @@
     const btn = document.getElementById('viewing-submit');
     btn.disabled = true; btn.textContent = 'Sending…';
     try {
-      const res = await fetch('https://formspree.io/f/mbdqprnn', {
-        method: 'POST',
-        body: new FormData(e.target),
-        headers: { 'Accept': 'application/json' }
-      });
+      const res = await fetch('https://formspree.io/f/mbdqprnn', { method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' } });
       if (res.ok) {
         document.getElementById('viewing-success').classList.add('visible');
         btn.style.display = 'none';
