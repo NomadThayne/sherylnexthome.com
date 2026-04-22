@@ -3,195 +3,704 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ojai Resources — Local Guides for Buyers & Sellers · NextHome</title>
-<meta name="description" content="Helpful resources for buying or selling a home in Ojai, California.">
+<title>Ojai Valley Resources — Local Guide for Residents & Buyers · NextHome</title>
+<meta name="description" content="Utilities, schools, medical, dining, government, and community resources for the Ojai Valley. A local guide from Sheryl Whipple, NextHome Pacific Coast Realty.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --orange: #E8632A;
-    --orange-light: #FDF0E9;
-    --orange-dark: #B84E1E;
-    --gray: #5F5E5A;
-    --gray-light: #F5F4F1;
-    --gray-dark: #2C2C2A;
-    --blue: #185FA5;
-    --sand: #F9F6F0;
-    --text: #2C2C2A;
-    --muted: #888780;
-    --border: rgba(0,0,0,0.10);
+    --orange: #E8632A; --orange-dark: #B84E1E; --gray: #5F5E5A; --gray-light: #F5F4F1;
+    --gray-dark: #2C2C2A; --sand: #F9F6F0; --text: #2C2C2A; --muted: #888780; --border: rgba(0,0,0,0.10);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; font-weight: 300; color: var(--text); background: #fff; font-size: 17px; line-height: 1.7; }
-  nav {
-    position: sticky; top: 0; z-index: 100; background: #fff;
-    border-bottom: 1px solid var(--border); padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between; height: 62px;
-  }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 62px; }
   .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
-  .nav-brand .nh-badge { background: var(--orange); color: #fff; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; padding: 3px 7px; border-radius: 3px; text-transform: uppercase; }
-  .nav-brand .site-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; letter-spacing: -0.01em; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--gray); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--orange); }
-  .page-hero { background: var(--sand); padding: 4rem 2rem 3.5rem; }
-  .container { max-width: 960px; margin: 0 auto; }
-  .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
-  h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; line-height: 1.2; color: var(--gray-dark); margin-bottom: 0.8rem; }
-  h1 em { font-style: italic; color: var(--orange); }
-  .hero-sub { color: var(--gray); font-size: 1rem; max-width: 560px; }
-  .resources-section { padding: 4rem 2rem; }
-  .resources-section:nth-child(odd) { background: #fff; }
-  .resources-section:nth-child(even) { background: var(--sand); }
-  h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 1.5rem; }
-  .resource-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
-  .resource-card { border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; background: #fff; }
-  .resource-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 0.4rem; }
-  .resource-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.55; margin-bottom: 0.75rem; }
-  .resource-card a { font-size: 0.85rem; color: var(--orange); text-decoration: none; font-weight: 500; }
-  .resource-card a:hover { text-decoration: underline; }
-  .resource-tag { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; display: block; }
-  footer { background: var(--gray-dark); color: rgba(255,255,255,0.55); padding: 2.5rem 2rem; text-align: center; font-size: 0.85rem; }
-  footer .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.4rem; }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 0.75rem; font-size: 0.82rem; }
+  .nav-nh-logo { height: 30px; width: auto; display: block; }
+  .site-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; }
+  .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--orange); }
+
+  /* PAGE HEADER */
+  .page-header { background: var(--sand); padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--border); }
+  .page-header .eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
+  .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; line-height: 1.2; color: var(--gray-dark); margin-bottom: 0.75rem; }
+  .page-header h1 em { font-style: italic; color: var(--orange); }
+  .page-header p { color: var(--gray); font-size: 1rem; max-width: 560px; }
+
+  /* TOC / JUMP NAV */
+  .toc { background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; overflow-x: auto; white-space: nowrap; }
+  .toc-inner { display: inline-flex; gap: 0; }
+  .toc a { display: inline-block; font-size: 0.82rem; font-weight: 400; color: var(--muted); text-decoration: none; padding: 0.85rem 1.1rem; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+  .toc a:hover { color: var(--orange); border-color: var(--orange); }
+
+  /* SECTIONS */
+  .resource-section { padding: 3.5rem 2rem; border-bottom: 1px solid var(--border); }
+  .resource-section:last-of-type { border-bottom: none; }
+  .resource-section:nth-child(even) { background: var(--sand); }
+  .container { max-width: 900px; margin: 0 auto; }
+  .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 2rem; }
+  .section-title em { font-style: italic; color: var(--orange); }
+
+  /* RESOURCE CARDS */
+  .resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .resource-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.4rem; }
+  .resource-section:nth-child(even) .resource-card { background: #fff; }
+  .resource-card .card-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .resource-card .card-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+  .resource-card .card-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 0.5rem; }
+  .resource-card .card-body { font-size: 0.88rem; color: var(--gray); line-height: 1.65; margin-bottom: 0.75rem; }
+  .resource-card .card-details { font-size: 0.82rem; color: var(--gray); line-height: 1.75; }
+  .resource-card .card-details strong { color: var(--gray-dark); font-weight: 500; }
+  .resource-card a.card-link { display: inline-block; margin-top: 0.6rem; font-size: 0.82rem; font-weight: 500; color: var(--orange); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  .resource-card a.card-link:hover { border-color: var(--orange); }
+
+  /* SIMPLE LIST (for dining, attractions, etc.) */
+  .resource-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0; }
+  .resource-list li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .resource-list li:last-child { border-bottom: none; }
+  .resource-list .rl-name { font-size: 0.92rem; color: var(--gray-dark); }
+  .resource-list .rl-note { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+  .resource-list a { color: var(--gray-dark); text-decoration: none; }
+  .resource-list a:hover { color: var(--orange); }
+
+  /* TWO-COL LIST */
+  .two-col-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+  @media (max-width: 640px) { .two-col-list { grid-template-columns: 1fr; } }
+
+  /* OFFICIAL LINKS (simple row links) */
+  .link-row { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  .link-row:last-child { border-bottom: none; }
+  .link-row .lr-name { color: var(--gray-dark); }
+  .link-row .lr-sub { font-size: 0.78rem; color: var(--muted); }
+  .link-row a.lr-link { font-size: 0.82rem; font-weight: 500; color: var(--orange); text-decoration: none; white-space: nowrap; }
+  .link-row a.lr-link:hover { text-decoration: underline; }
+
+  /* WARNING BOX */
+  .info-box { background: #FEF3E2; border-left: 3px solid var(--orange); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--gray-dark); margin-bottom: 1.5rem; line-height: 1.6; }
+  .info-box strong { font-weight: 500; }
+
+  /* DISTANCES TABLE */
+  .distance-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .distance-table th { text-align: left; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.5rem 0; border-bottom: 2px solid var(--border); }
+  .distance-table td { padding: 0.65rem 0; border-bottom: 1px solid var(--border); color: var(--gray-dark); vertical-align: top; }
+  .distance-table td:last-child { color: var(--muted); font-size: 0.85rem; text-align: right; }
+  .distance-table tr:last-child td { border-bottom: none; }
+
+  footer { background: var(--gray-dark); color: rgba(255,255,255,0.5); padding: 2rem; text-align: center; font-size: 0.82rem; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 0.75rem; }
   footer a:hover { color: var(--orange); }
+
+  @media (max-width: 640px) { .resource-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
 <nav>
   <a class="nav-brand" href="index.html">
+    <img src="images/NH_Logo.png" alt="NextHome" class="nav-nh-logo">
     <span class="site-name">Ojai Homes</span>
-    <span class="nh-badge">NextHome</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#listings">Listings</a></li>
-    <li><a href="index.html#neighborhood">Neighborhood</a></li>
-    <li><a href="index.html#about">About Ojai</a></li>
-    <li><a href="index.html#agent">Your Agent</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+  <a class="nav-back" href="index.html">← Back to home</a>
 </nav>
 
-<div class="page-hero">
+<!-- PAGE HEADER -->
+<div class="page-header">
   <div class="container">
-    <p class="section-label">Buyer & Seller Guides</p>
-    <h1>Ojai <em>Resources</em></h1>
-    <p class="hero-sub">Local links, guides, and information for anyone buying or selling in the Ojai Valley.</p>
+    <p class="eyebrow">Ojai Valley</p>
+    <h1>Valley <em>Resources</em></h1>
+    <p>Utilities, schools, medical care, dining, government, and community links for residents and buyers in the Ojai Valley. Maintained by Sheryl Whipple, <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:none;">NextHome Pacific Coast Realty</a>.</p>
   </div>
 </div>
 
-<div class="resources-section">
+<!-- JUMP NAV -->
+<div class="toc">
+  <div class="toc-inner">
+    <a href="#utilities">Utilities</a>
+    <a href="#government">Government</a>
+    <a href="#schools">Schools</a>
+    <a href="#medical">Medical</a>
+    <a href="#dining">Dining &amp; Shopping</a>
+    <a href="#outdoors">Outdoors</a>
+    <a href="#arts">Arts &amp; Culture</a>
+    <a href="#news">News &amp; Community</a>
+    <a href="#getting-around">Getting Around</a>
+  </div>
+</div>
+
+<!-- UTILITIES -->
+<div class="resource-section" id="utilities">
   <div class="container">
-    <h2>For Buyers</h2>
-    <div class="resource-cards">
+    <p class="section-label">Essential Services</p>
+    <h2 class="section-title">Utilities &amp; <em>Services</em></h2>
+    <div class="resource-grid">
+
       <div class="resource-card">
-        <span class="resource-tag">Getting Started</span>
-        <h3>Ojai Buyer's Guide</h3>
-        <p>What to know before buying in Ojai — from the unique inventory to common contingencies in the California market.</p>
-        <a href="index.html#contact">Request from Sheryl →</a>
+        <div class="card-icon">⚡</div>
+        <div class="card-label">Electricity</div>
+        <div class="card-name">Southern California Edison</div>
+        <p class="card-body">Electric utility serving the Ojai Valley. Start/stop service, report outages, pay bills online.</p>
+        <div class="card-details">
+          <strong>Customer Service</strong> (800) 655-4555<br>
+          <strong>Outages 24/7</strong> (800) 611-1911
+        </div>
+        <a href="https://www.sce.com" target="_blank" rel="noopener" class="card-link">sce.com ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Local Government</span>
-        <h3>City of Ojai</h3>
-        <p>Planning, permits, zoning, utilities, and city services for Ojai residents and prospective buyers.</p>
-        <a href="https://www.ci.ojai.ca.us" target="_blank">ci.ojai.ca.us →</a>
+        <div class="card-icon">🔥</div>
+        <div class="card-label">Natural Gas</div>
+        <div class="card-name">Southern California Gas</div>
+        <p class="card-body">Gas service for the Ojai Valley. Start/stop service, report leaks, manage your account online.</p>
+        <div class="card-details">
+          <strong>Customer Service</strong> (800) 427-2200<br>
+          <strong>Gas Leak Emergency</strong> (800) 427-2200
+        </div>
+        <a href="https://www.socalgas.com" target="_blank" rel="noopener" class="card-link">socalgas.com ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Schools</span>
-        <h3>Ojai Unified School District</h3>
-        <p>Public school information for the Ojai Valley including enrollment, boundaries, and ratings.</p>
-        <a href="https://www.ojaiusd.org" target="_blank">ojaiusd.org →</a>
+        <div class="card-icon">💧</div>
+        <div class="card-label">Water — City of Ojai</div>
+        <div class="card-name">Casitas Municipal Water District</div>
+        <p class="card-body">Primary water provider for the Ojai Valley, sourcing from Lake Casitas, the Ventura River, and local groundwater.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 649-2251<br>
+          <strong>Address</strong> 1055 Ventura Ave, Oak View
+        </div>
+        <a href="https://www.casitaswater.org" target="_blank" rel="noopener" class="card-link">casitaswater.org ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">County</span>
-        <h3>Ventura County Assessor</h3>
-        <p>Property tax information, assessed values, and parcel data for all properties in Ventura County.</p>
-        <a href="https://assessor.ventura.org" target="_blank">assessor.ventura.org →</a>
+        <div class="card-icon">💧</div>
+        <div class="card-label">Water — Meiners Oaks / Unincorporated</div>
+        <div class="card-name">Meiners Oaks Water District</div>
+        <p class="card-body">Serves the unincorporated Meiners Oaks community in the Ojai Valley with treated ground and surface water.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-2114<br>
+          <strong>Address</strong> 202 W. El Roblar Dr, Ojai
+        </div>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Environment</span>
-        <h3>Fire Hazard Severity Zones</h3>
-        <p>Many Ojai properties are in fire hazard zones. Cal Fire's map shows current designations for the valley.</p>
-        <a href="https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/" target="_blank">Cal Fire map →</a>
+        <div class="card-icon">🗑️</div>
+        <div class="card-label">Trash &amp; Recycling</div>
+        <div class="card-name">E.J. Harrison &amp; Sons</div>
+        <p class="card-body">Trash, recycling, and yard trimmings collection for City of Ojai residents. One free bulky item pickup per year.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 647-1414<br>
+          <strong>City Info</strong> (805) 646-5581
+        </div>
+        <a href="https://www.ejharrison.com" target="_blank" rel="noopener" class="card-link">ejharrison.com ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Water</span>
-        <h3>Casitas Municipal Water District</h3>
-        <p>Water service, quality reports, and conservation info for properties in the Ojai Valley service area.</p>
-        <a href="https://www.casitaswater.org" target="_blank">casitaswater.org →</a>
+        <div class="card-icon">🚽</div>
+        <div class="card-label">Sewer</div>
+        <div class="card-name">Ojai Valley Sanitary District</div>
+        <p class="card-body">Sewer and wastewater service for over 20,000 residents in the Ojai Valley.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-5548<br>
+          <strong>Address</strong> 1072 Tico Rd, Ojai
+        </div>
+        <a href="https://www.ojaisan.org" target="_blank" rel="noopener" class="card-link">ojaisan.org ↗</a>
       </div>
+
+      <div class="resource-card">
+        <div class="card-icon">📡</div>
+        <div class="card-label">Internet</div>
+        <div class="card-name">Internet Options</div>
+        <p class="card-body">Several providers serve the Ojai Valley with varying availability by address.</p>
+        <div class="card-details">
+          <strong>Spectrum</strong> — Cable · <a href="https://www.spectrum.com" target="_blank" rel="noopener" style="color:var(--orange);">spectrum.com</a><br>
+          <strong>AT&amp;T</strong> — Fiber/DSL · <a href="https://www.att.com" target="_blank" rel="noopener" style="color:var(--orange);">att.com</a><br>
+          <strong>Starlink</strong> — Satellite · <a href="https://www.starlink.com" target="_blank" rel="noopener" style="color:var(--orange);">starlink.com</a><br>
+          <span style="font-size:0.78rem; color:var(--muted);">Rural properties may have limited options — Starlink is a reliable backup.</span>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">📬</div>
+        <div class="card-label">Mail</div>
+        <div class="card-name">Ojai Post Office</div>
+        <p class="card-body">Main USPS post office serving the Ojai Valley.</p>
+        <div class="card-details">
+          <strong>Address</strong> 201 E Ojai Ave, Ojai, CA 93023<br>
+          <strong>Phone</strong> (800) 275-8777
+        </div>
+        <a href="https://tools.usps.com/find-location.htm" target="_blank" rel="noopener" class="card-link">Find hours ↗</a>
+      </div>
+
     </div>
   </div>
 </div>
 
-<div class="resources-section">
+<!-- GOVERNMENT -->
+<div class="resource-section" id="government">
   <div class="container">
-    <h2>For Sellers</h2>
-    <div class="resource-cards">
+    <p class="section-label">Local, State &amp; Federal</p>
+    <h2 class="section-title">Elected <em>Officials</em></h2>
+    <div class="resource-grid">
+
       <div class="resource-card">
-        <span class="resource-tag">Market Data</span>
-        <h3>Current Ojai Market Report</h3>
-        <p>Median prices, days on market, and inventory trends for the Ojai Valley. Updated monthly by Sheryl.</p>
-        <a href="index.html#contact">Request from Sheryl →</a>
+        <div class="card-icon">🏛️</div>
+        <div class="card-label">City of Ojai · Mayor</div>
+        <div class="card-name">Andy Gilman</div>
+        <p class="card-body">Elected Mayor of the City of Ojai in November 2024. Former Oak Grove School teacher and longtime Ojai community leader.</p>
+        <div class="card-details">
+          <strong>City Hall</strong> 401 S. Ventura St, Ojai<br>
+          <strong>Phone</strong> (805) 646-5581
+        </div>
+        <a href="https://www.ojai.ca.gov/267/City-Council" target="_blank" rel="noopener" class="card-link">ojai.ca.gov ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Disclosure</span>
-        <h3>California Seller Disclosures</h3>
-        <p>Overview of required disclosures in California real estate, including the Transfer Disclosure Statement and natural hazard zones.</p>
-        <a href="index.html#contact">Ask Sheryl →</a>
+        <div class="card-icon">🏛️</div>
+        <div class="card-label">City of Ojai · City Council</div>
+        <div class="card-name">Ojai City Council</div>
+        <p class="card-body">Five-member council serving as the legislative body for the City of Ojai. District-based elections since 2018.</p>
+        <div class="card-details">
+          <strong>Meetings</strong> 1st &amp; 3rd Tuesday, 6pm<br>
+          <strong>City Hall</strong> 401 S. Ventura St, Ojai<br>
+          <strong>Phone</strong> (805) 646-5581
+        </div>
+        <a href="https://www.ojai.ca.gov/267/City-Council" target="_blank" rel="noopener" class="card-link">City Council ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Staging & Prep</span>
-        <h3>Preparing Your Home for Sale</h3>
-        <p>Sheryl's checklist for getting your Ojai property ready — from landscaping to photography.</p>
-        <a href="index.html#contact">Get the checklist →</a>
+        <div class="card-icon">🏛️</div>
+        <div class="card-label">Ventura County Board of Supervisors</div>
+        <div class="card-name">County of Ventura</div>
+        <p class="card-body">Governs unincorporated areas of the Ojai Valley outside city limits. Five supervisorial districts.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 654-2703<br>
+          <strong>Address</strong> 800 S. Victoria Ave, Ventura
+        </div>
+        <a href="https://www.ventura.org/board-of-supervisors/" target="_blank" rel="noopener" class="card-link">ventura.org ↗</a>
       </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🇺🇸</div>
+        <div class="card-label">CA State Assembly · District 37</div>
+        <div class="card-name">CA State Legislature</div>
+        <p class="card-body">Ojai is represented in the California State Assembly and Senate. Find your specific representative by address.</p>
+        <div class="card-details">
+          <strong>Find your rep</strong> by address on the CA Legislature website.
+        </div>
+        <a href="https://www.legislature.ca.gov" target="_blank" rel="noopener" class="card-link">legislature.ca.gov ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🇺🇸</div>
+        <div class="card-label">U.S. Congress · CA District 26</div>
+        <div class="card-name">U.S. House &amp; Senate</div>
+        <p class="card-body">Ojai is in California's 26th Congressional District. Find your federal representatives by address.</p>
+        <div class="card-details">
+          <strong>Find your rep</strong> at house.gov or senate.gov.
+        </div>
+        <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener" class="card-link">house.gov ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🚨</div>
+        <div class="card-label">Emergency &amp; Services</div>
+        <div class="card-name">Essential Contacts</div>
+        <p class="card-body">Key numbers for Ojai Valley residents.</p>
+        <div class="card-details">
+          <strong>Emergency</strong> 911<br>
+          <strong>Ventura Co. Sheriff (non-emergency)</strong> (805) 654-9511<br>
+          <strong>Ojai City Hall</strong> (805) 646-5581<br>
+          <strong>CA DMV</strong> (800) 777-0133
+        </div>
+        <a href="https://www.ojai.ca.gov" target="_blank" rel="noopener" class="card-link">ojai.ca.gov ↗</a>
+      </div>
+
     </div>
   </div>
 </div>
 
-<div class="resources-section">
+<!-- SCHOOLS -->
+<div class="resource-section" id="schools">
   <div class="container">
-    <h2>Life in Ojai</h2>
-    <div class="resource-cards">
+    <p class="section-label">Education</p>
+    <h2 class="section-title">Local <em>Schools</em></h2>
+    <div class="resource-grid">
+
       <div class="resource-card">
-        <span class="resource-tag">Community</span>
-        <h3>Ojai Community Events</h3>
-        <p>The Ojai Music Festival, Playwrights Festival, Studio Artists Tour, and year-round farmers market.</p>
-        <a href="https://www.visitojai.com" target="_blank">visitojai.com →</a>
+        <div class="card-icon">🏫</div>
+        <div class="card-label">Public · K–8</div>
+        <div class="card-name">Ojai Unified School District</div>
+        <p class="card-body">Serves all public schools in the Ojai Valley including elementary, middle, and high school levels.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 640-4300<br>
+          <strong>Address</strong> 414 E. Ojai Ave, Ojai
+        </div>
+        <a href="https://www.ojaiusd.org" target="_blank" rel="noopener" class="card-link">ojaiusd.org ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Outdoors</span>
-        <h3>Los Padres National Forest</h3>
-        <p>Trails, camping, and recreation in the national forest that surrounds the Ojai Valley on three sides.</p>
-        <a href="https://www.fs.usda.gov/lospadres" target="_blank">fs.usda.gov →</a>
+        <div class="card-icon">🏫</div>
+        <div class="card-label">Public Elementary</div>
+        <div class="card-name">Topa Topa Elementary &amp; Others</div>
+        <p class="card-body">Ojai USD operates several elementary schools including Topa Topa, Meiners Oaks, and Mira Monte. School assignment depends on address.</p>
+        <div class="card-details">
+          <strong>District</strong> (805) 640-4300
+        </div>
+        <a href="https://www.ojaiusd.org" target="_blank" rel="noopener" class="card-link">Find your school ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">Local Business</span>
-        <h3>Ojai Valley Chamber of Commerce</h3>
-        <p>Local businesses, services, and events in the Ojai community.</p>
-        <a href="https://ojaichamber.org" target="_blank">ojaichamber.org →</a>
+        <div class="card-icon">🏫</div>
+        <div class="card-label">Public Middle School</div>
+        <div class="card-name">Matilija Middle School</div>
+        <p class="card-body">Serves Ojai Valley students in grades 6–8.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 640-4350<br>
+          <strong>Address</strong> 703 El Paseo Rd, Ojai
+        </div>
+        <a href="https://www.ojaiusd.org/matilija" target="_blank" rel="noopener" class="card-link">ojaiusd.org ↗</a>
       </div>
+
       <div class="resource-card">
-        <span class="resource-tag">News</span>
-        <h3>Ojai Valley News</h3>
-        <p>Hyper-local news, community updates, and coverage of the Ojai Valley.</p>
-        <a href="https://www.ovnews.com" target="_blank">ovnews.com →</a>
+        <div class="card-icon">🏫</div>
+        <div class="card-label">Public High School</div>
+        <div class="card-name">Nordhoff High School</div>
+        <p class="card-body">The public high school for the Ojai Valley, serving grades 9–12. Home of the Rangers.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 640-4300<br>
+          <strong>Address</strong> 1401 Maricopa Hwy, Ojai
+        </div>
+        <a href="https://www.ojaiusd.org/nordhoff" target="_blank" rel="noopener" class="card-link">ojaiusd.org ↗</a>
       </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🎓</div>
+        <div class="card-label">Independent · K–12</div>
+        <div class="card-name">The Thacher School</div>
+        <p class="card-body">Prestigious boarding and day school in the Ojai Valley, founded in 1889. Known for its riding program and academic rigor.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-4377<br>
+          <strong>Address</strong> 5025 Thacher Rd, Ojai
+        </div>
+        <a href="https://www.thacher.org" target="_blank" rel="noopener" class="card-link">thacher.org ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🌿</div>
+        <div class="card-label">Independent · K–12</div>
+        <div class="card-name">Oak Grove School</div>
+        <p class="card-body">Founded in the tradition of Krishnamurti, Oak Grove emphasizes self-inquiry, nature, and holistic learning.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-8236<br>
+          <strong>Address</strong> 220 W. Lomita Ave, Ojai
+        </div>
+        <a href="https://www.oakgroveschool.org" target="_blank" rel="noopener" class="card-link">oakgroveschool.org ↗</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MEDICAL -->
+<div class="resource-section" id="medical">
+  <div class="container">
+    <p class="section-label">Health &amp; Medical</p>
+    <h2 class="section-title">Medical <em>Services</em></h2>
+    <div class="info-box"><strong>In a life-threatening emergency, always call 911.</strong> Do not drive yourself to the hospital.</div>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <div class="card-icon">🏥</div>
+        <div class="card-label">Hospital · Emergency Room</div>
+        <div class="card-name">Community Memorial Hospital – Ojai</div>
+        <p class="card-body">The valley's local hospital with a 24-hour Emergency Department. 103-bed acute care facility serving the entire Ojai Valley.</p>
+        <div class="card-details">
+          <strong>Main / ER</strong> (805) 646-1401 · Open 24/7<br>
+          <strong>Address</strong> 1306 Maricopa Hwy, Ojai
+        </div>
+        <a href="https://www.mycmh.org/locations/community-memorial-hospital-ojai/" target="_blank" rel="noopener" class="card-link">mycmh.org ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🏥</div>
+        <div class="card-label">Full-Service Hospital · Ventura</div>
+        <div class="card-name">Community Memorial Hospital – Ventura</div>
+        <p class="card-body">Larger campus in Ventura for advanced care, specialists, surgery, and maternity services. Works in tandem with the Ojai campus.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 652-5011<br>
+          <strong>Address</strong> 147 N. Brent St, Ventura<br>
+          <strong>Drive</strong> ~30 min from Ojai
+        </div>
+        <a href="https://www.mycmh.org" target="_blank" rel="noopener" class="card-link">mycmh.org ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🩺</div>
+        <div class="card-label">Urgent Care</div>
+        <div class="card-name">Community Memorial Urgent Care</div>
+        <p class="card-body">Multiple urgent care locations throughout Ventura County for non-emergency care. Check website for nearest location and hours.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 652-5011
+        </div>
+        <a href="https://www.mycmh.org/locations/" target="_blank" rel="noopener" class="card-link">Find a location ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">💊</div>
+        <div class="card-label">Pharmacy</div>
+        <div class="card-name">Ojai Valley Pharmacy &amp; Others</div>
+        <p class="card-body">Independent and chain pharmacies serve the Ojai Valley. Rite Aid and CVS locations are available in Ventura, ~30 minutes away.</p>
+        <div class="card-details">
+          <strong>Ojai Valley Pharmacy</strong> (805) 646-1214<br>
+          <strong>Address</strong> 218 W. Ojai Ave, Ojai
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🧠</div>
+        <div class="card-label">Mental Health</div>
+        <div class="card-name">Ventura County Behavioral Health</div>
+        <p class="card-body">County mental health services, crisis support, and community resources for Ventura County residents.</p>
+        <div class="card-details">
+          <strong>Crisis Line 24/7</strong> (866) 998-2243<br>
+          <strong>Phone</strong> (805) 652-6727
+        </div>
+        <a href="https://www.ventura.org/behavioral-health/" target="_blank" rel="noopener" class="card-link">ventura.org ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🐾</div>
+        <div class="card-label">Veterinary</div>
+        <div class="card-name">Ojai Valley Veterinary Hospital</div>
+        <p class="card-body">Full-service veterinary care for the Ojai Valley.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-4543<br>
+          <strong>Address</strong> 1220 Maricopa Hwy, Ojai
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DINING & SHOPPING -->
+<div class="resource-section" id="dining">
+  <div class="container">
+    <p class="section-label">Eat, Shop &amp; Explore</p>
+    <h2 class="section-title">Dining &amp; <em>Shopping</em></h2>
+    <div class="two-col-list">
+      <ul class="resource-list">
+        <li><span class="rl-name">Farmer &amp; the Cook</span><span class="rl-note">Farm-to-table · Meiners Oaks</span></li>
+        <li><span class="rl-name">Azu Restaurant</span><span class="rl-note">Mediterranean · downtown</span></li>
+        <li><span class="rl-name">Olivella</span><span class="rl-note">Italian · Ojai Valley Inn</span></li>
+        <li><span class="rl-name">The Ranch House</span><span class="rl-note">Historic fine dining</span></li>
+        <li><span class="rl-name">Ojai Beverage Company</span><span class="rl-note">Local bottle shop &amp; bar</span></li>
+        <li><span class="rl-name">Beacon Coffee</span><span class="rl-note">Local roaster</span></li>
+        <li><span class="rl-name">Rory's Place</span><span class="rl-note">Breakfast &amp; brunch</span></li>
+        <li><span class="rl-name">Ojai Rotie</span><span class="rl-note">Wine bar &amp; rotisserie</span></li>
+      </ul>
+      <ul class="resource-list">
+        <li><span class="rl-name">Vons / Pavilions</span><span class="rl-note">Grocery · Ojai Ave</span></li>
+        <li><span class="rl-name">Westridge Market</span><span class="rl-note">Local grocery</span></li>
+        <li><span class="rl-name">Ojai Sunday Farmers Market</span><span class="rl-note">Downtown · weekly</span></li>
+        <li><span class="rl-name">Bart's Books</span><span class="rl-note">Beloved outdoor bookstore</span></li>
+        <li><span class="rl-name">Human Arts Gallery</span><span class="rl-note">Local art &amp; crafts</span></li>
+        <li><span class="rl-name">Ojai Hardware</span><span class="rl-note">Ace Hardware · Ojai Ave</span></li>
+        <li><span class="rl-name">Rainbow Bridge Natural Foods</span><span class="rl-note">Health food &amp; wellness</span></li>
+        <li><span class="rl-name">Lassen's Natural Foods</span><span class="rl-note">Natural grocery · nearby</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- OUTDOORS -->
+<div class="resource-section" id="outdoors">
+  <div class="container">
+    <p class="section-label">Nature &amp; Recreation</p>
+    <h2 class="section-title">Outdoors &amp; <em>Trails</em></h2>
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <div class="card-icon">🚴</div>
+        <div class="card-label">Paved Trail · Valley-wide</div>
+        <div class="card-name">Ojai Valley Trail</div>
+        <p class="card-body">A beloved 9.5-mile paved multi-use trail running through the entire valley — from Ojai to Ventura. Ideal for walking, cycling, and running. Shaded by oaks through much of its length.</p>
+        <a href="https://www.ventura.org/roads-transportation/trails/ojai-valley-trail/" target="_blank" rel="noopener" class="card-link">Trail info ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🌲</div>
+        <div class="card-label">National Forest</div>
+        <div class="card-name">Los Padres National Forest</div>
+        <p class="card-body">Over 1.75 million acres of wilderness bordering the Ojai Valley. Hiking, camping, and horseback riding. Trailheads accessible directly from the valley.</p>
+        <a href="https://www.fs.usda.gov/lospadres" target="_blank" rel="noopener" class="card-link">fs.usda.gov ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🎣</div>
+        <div class="card-label">Reservoir · Recreation</div>
+        <div class="card-name">Lake Casitas</div>
+        <p class="card-body">A 6-mile-long reservoir west of Ojai. Fishing, camping, boating, and picnicking. Home to record-size largemouth bass. No swimming.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 649-2233
+        </div>
+        <a href="https://www.lakecasitas.info" target="_blank" rel="noopener" class="card-link">lakecasitas.info ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">⛳</div>
+        <div class="card-label">Golf · Valley</div>
+        <div class="card-name">Soule Park Golf Course</div>
+        <p class="card-body">18-hole public golf course in the heart of the Ojai Valley. Scenic and affordable, open to all.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (805) 646-5633<br>
+          <strong>Address</strong> 1033 E. Ojai Ave, Ojai
+        </div>
+        <a href="https://www.souleparkgolf.com" target="_blank" rel="noopener" class="card-link">souleparkgolf.com ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🏨</div>
+        <div class="card-label">Resort &amp; Spa</div>
+        <div class="card-name">Ojai Valley Inn &amp; Spa</div>
+        <p class="card-body">The valley's landmark resort, with a world-class spa, tennis, golf, dining, and sweeping mountain views. A beloved community institution since 1923.</p>
+        <div class="card-details">
+          <strong>Phone</strong> (888) 697-8780<br>
+          <strong>Address</strong> 905 Country Club Rd, Ojai
+        </div>
+        <a href="https://www.ojaivalleyinn.com" target="_blank" rel="noopener" class="card-link">ojaivalleyinn.com ↗</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="card-icon">🏞️</div>
+        <div class="card-label">Preserve · Trails</div>
+        <div class="card-name">Ojai River Preserve &amp; Trails</div>
+        <p class="card-body">A network of trails along the Ventura River and surrounding hillsides. Access points throughout the valley, including near Macdonald Drive.</p>
+        <a href="https://www.alltrails.com/us/california/ojai" target="_blank" rel="noopener" class="card-link">AllTrails — Ojai ↗</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ARTS & CULTURE -->
+<div class="resource-section" id="arts">
+  <div class="container">
+    <p class="section-label">Arts, Culture &amp; Events</p>
+    <h2 class="section-title">Arts &amp; <em>Culture</em></h2>
+    <div class="two-col-list">
+      <ul class="resource-list">
+        <li><span class="rl-name"><a href="https://www.ojaifestival.org" target="_blank" rel="noopener">Ojai Music Festival</a></span><span class="rl-note">June · world-renowned</span></li>
+        <li><span class="rl-name"><a href="https://www.ojaifilmfestival.com" target="_blank" rel="noopener">Ojai Film Festival</a></span><span class="rl-note">Annual · fall</span></li>
+        <li><span class="rl-name">Ojai Playwrights Conference</span><span class="rl-note">Annual · summer</span></li>
+        <li><span class="rl-name"><a href="https://www.ojaiartcenter.org" target="_blank" rel="noopener">Ojai Art Center</a></span><span class="rl-note">Galleries &amp; classes</span></li>
+        <li><span class="rl-name">Libbey Bowl</span><span class="rl-note">Outdoor concert venue</span></li>
+        <li><span class="rl-name"><a href="https://www.ojaimuseum.org" target="_blank" rel="noopener">Ojai Valley Museum</a></span><span class="rl-note">Local history &amp; art</span></li>
+      </ul>
+      <ul class="resource-list">
+        <li><span class="rl-name">Krishnamurti Foundation</span><span class="rl-note">Philosophy &amp; education</span></li>
+        <li><span class="rl-name">Ojai Sunday Farmers Market</span><span class="rl-note">Downtown · year-round</span></li>
+        <li><span class="rl-name">Ojai Wine Festival</span><span class="rl-note">Annual · Lake Casitas</span></li>
+        <li><span class="rl-name">Bart's Books</span><span class="rl-note">Outdoor bookstore · since 1964</span></li>
+        <li><span class="rl-name">Ojai Studio Artists Tour</span><span class="rl-note">Annual fall open studios</span></li>
+        <li><span class="rl-name">Ojai Day</span><span class="rl-note">Annual fall street festival</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- NEWS & COMMUNITY -->
+<div class="resource-section" id="news">
+  <div class="container">
+    <p class="section-label">Stay Connected</p>
+    <h2 class="section-title">News &amp; <em>Community</em></h2>
+    <div class="link-row">
+      <div><div class="lr-name">Ojai Valley News</div><div class="lr-sub">Local newspaper covering Ojai since 1891</div></div>
+      <a href="https://www.ojaivalleynews.com" target="_blank" rel="noopener" class="lr-link">ojaivalleynews.com ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Ojai Valley News — Facebook</div><div class="lr-sub">Community updates and breaking local news</div></div>
+      <a href="https://www.facebook.com/OjaiValleyNews" target="_blank" rel="noopener" class="lr-link">Facebook ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">VC Star — Ventura County Star</div><div class="lr-sub">Regional newspaper covering Ventura County</div></div>
+      <a href="https://www.vcstar.com" target="_blank" rel="noopener" class="lr-link">vcstar.com ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">City of Ojai — Official Site</div><div class="lr-sub">City news, agendas, permits, and services</div></div>
+      <a href="https://www.ojai.ca.gov" target="_blank" rel="noopener" class="lr-link">ojai.ca.gov ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">National Weather Service — LA/Oxnard</div><div class="lr-sub">Official forecasts, fire weather, and wind advisories</div></div>
+      <a href="https://www.weather.gov/lox/" target="_blank" rel="noopener" class="lr-link">weather.gov ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Ventura County Fire Department</div><div class="lr-sub">Fire updates, evacuation zones, and preparedness</div></div>
+      <a href="https://www.vcfd.org" target="_blank" rel="noopener" class="lr-link">vcfd.org ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Watch Duty</div><div class="lr-sub">Real-time wildfire tracking app — essential for Ojai Valley residents</div></div>
+      <a href="https://www.watchduty.org" target="_blank" rel="noopener" class="lr-link">watchduty.org ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Nextdoor — Ojai</div><div class="lr-sub">Neighborhood social network for local discussion</div></div>
+      <a href="https://nextdoor.com" target="_blank" rel="noopener" class="lr-link">nextdoor.com ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- GETTING AROUND -->
+<div class="resource-section" id="getting-around">
+  <div class="container">
+    <p class="section-label">Transport &amp; Distances</p>
+    <h2 class="section-title">Getting <em>Around</em></h2>
+    <div class="info-box"><strong>A car is strongly recommended.</strong> Ojai is a rural valley community. While public transit connects to Ventura, most errands and adventures require a vehicle. That said, the valley itself is very bikeable.</div>
+    <table class="distance-table">
+      <thead>
+        <tr><th>Destination</th><th>Notes</th><th>Drive time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Ventura (coast, shopping, hospital)</td><td>Hwy 33 south</td><td>~30 min</td></tr>
+        <tr><td>Santa Barbara</td><td>Hwy 33 to 101 north</td><td>~45 min</td></tr>
+        <tr><td>Camarillo / Oxnard</td><td>Hwy 33 to 101 south</td><td>~45 min</td></tr>
+        <tr><td>Los Angeles (downtown)</td><td>Hwy 33 to 101 to 405</td><td>~80–90 min</td></tr>
+        <tr><td>LAX</td><td>Via 101</td><td>~90 min</td></tr>
+        <tr><td>Santa Paula</td><td>Hwy 150 east</td><td>~20 min</td></tr>
+        <tr><td>Carpinteria / Summerland</td><td>Via 101 north</td><td>~35 min</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:600; color:var(--gray-dark); margin:2rem 0 1rem;">Public Transit</h3>
+    <div class="link-row">
+      <div><div class="lr-name">VCTC Gold Coast Transit</div><div class="lr-sub">Bus service connecting Ojai to Ventura and beyond</div></div>
+      <a href="https://www.goldcoasttransit.org" target="_blank" rel="noopener" class="lr-link">goldcoasttransit.org ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Amtrak — Pacific Surfliner</div><div class="lr-sub">Ventura station (~30 min drive) connects to LA and San Diego</div></div>
+      <a href="https://www.amtrak.com" target="_blank" rel="noopener" class="lr-link">amtrak.com ↗</a>
+    </div>
+    <div class="link-row">
+      <div><div class="lr-name">Uber / Lyft</div><div class="lr-sub">Available in Ojai, though wait times can be longer than urban areas</div></div>
+      <a href="https://www.uber.com" target="_blank" rel="noopener" class="lr-link">uber.com ↗</a>
     </div>
   </div>
 </div>
 
 <footer>
-  <div class="footer-brand">Ojai Homes</div>
-  <div style="margin: 0.75rem 0;">
-    <a href="index.html">Home</a>
-    <a href="index.html#listings">Listings</a>
-    <a href="index.html#contact">Contact Sheryl</a>
-    <a href="resources.html">Resources</a>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+    <img src="images/NH_Luke.png" alt="NextHome" style="height:36px; width:auto; filter:brightness(0) invert(1); opacity:0.7;">
+    <div style="font-family:'Playfair Display',serif; font-size:1.1rem; color:#fff;">Ojai Homes</div>
   </div>
-  <div style="font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 1rem;">© 2026 Ojai Homes · NextHome · All rights reserved</div>
+  <div style="font-size:0.82rem; margin-bottom:0.75rem;">A <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);">NextHome Pacific Coast Realty</a> neighborhood resource · Ojai Valley, CA 93023</div>
+  <a href="index.html">Home</a>
+  <a href="index.html#listings">Listings</a>
+  <a href="index.html#contact">Contact Sheryl</a>
+  <div style="margin-top:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.25); text-decoration:none;">NextHome Pacific Coast Realty</a> · All rights reserved</div>
+  <div style="margin-top:0.5rem; font-size:0.72rem; color:rgba(255,255,255,0.2);">Resource information is provided as a community service and subject to change. Always verify directly with the provider.</div>
 </footer>
 
 </body>
