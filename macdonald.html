@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>12750 Macdonald Drive · Ojai, CA · Sheryl Whipple · NextHome</title>
 <meta name="description" content="5-bedroom French Provincial estate on 2.1 acres with pool, spa, and panoramic Topa Topa views. Listed by Sheryl Whipple, NextHome Pacific Coast Realty.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sherylnexthome.com/macdonald.html">
+<meta property="og:title" content="12750 Macdonald Drive · Ojai, CA · $3,575,000">
+<meta property="og:description" content="French Provincial estate on 2.1 private acres. 5 bed · 3.5 bath · 4,244 sq ft · Pool, spa, panoramic Topa Topa views. MLS# V1-33494.">
+<meta property="og:image" content="https://sherylnexthome.com/images/12750 Macdonald Drive/0d9e5f8967b6b1a9ec9bb080e3a7f3cd-cc_ft_384.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/NH_Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -157,9 +164,65 @@
         </div>
         <a href="tel:+18059017546" class="btn-primary">Call (805) 901-7546</a>
         <a href="mailto:sherylw.realestate@gmail.com?subject=Inquiry%3A%2012750%20Macdonald%20Drive&body=Hi%20Sheryl%2C%0A%0AI'm%20interested%20in%2012750%20Macdonald%20Drive%20(MLS%23%20V1-33494).%0A%0A" class="btn-secondary">Send a message</a>
+        <button onclick="openViewingModal()" class="btn-secondary" style="margin-top:0.75rem; cursor:pointer; font-family:'DM Sans',sans-serif;">Schedule a viewing</button>
         <p class="disclaimer">All information deemed reliable but not guaranteed. Buyer to verify all details. CalDRE #01379424</p>
       </div>
     </div>
+  </div>
+</div>
+
+<div style="background:#fff; padding:2rem 0 0;">
+  <div class="container">
+
+    <!-- MAP -->
+    <h2 class="section-title" style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:600; color:var(--gray-dark); margin-bottom:1.25rem;">Location</h2>
+    <div style="border-radius:10px; overflow:hidden; height:360px; margin-bottom:3rem;">
+      <iframe
+        src="https://www.google.com/maps?q=12750+Macdonald+Drive,+Ojai,+CA+93023&output=embed"
+        width="100%" height="100%" style="border:0; display:block;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- MORTGAGE CALCULATOR -->
+    <h2 class="section-title" style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:600; color:var(--gray-dark); margin-bottom:1.25rem;">Mortgage calculator</h2>
+    <div style="background:var(--sand); border-radius:10px; padding:1.75rem; margin-bottom:3rem;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:1rem; margin-bottom:1.25rem;">
+        <div>
+          <label style="display:block; font-size:0.78rem; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Home price</label>
+          <input type="number" id="mac-price" value="3575000" style="width:100%; padding:0.65rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:#fff; outline:none;">
+        </div>
+        <div>
+          <label style="display:block; font-size:0.78rem; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Down payment %</label>
+          <input type="number" id="mac-down" value="20" min="0" max="100" style="width:100%; padding:0.65rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:#fff; outline:none;">
+        </div>
+        <div>
+          <label style="display:block; font-size:0.78rem; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Interest rate %</label>
+          <input type="number" id="mac-rate" value="6.75" step="0.05" style="width:100%; padding:0.65rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:#fff; outline:none;">
+        </div>
+        <div>
+          <label style="display:block; font-size:0.78rem; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Loan term</label>
+          <select id="mac-term" style="width:100%; padding:0.65rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:#fff; outline:none;">
+            <option value="30">30 years</option>
+            <option value="20">20 years</option>
+            <option value="15">15 years</option>
+            <option value="10">10 years</option>
+          </select>
+        </div>
+      </div>
+      <div id="mac-result" style="background:#fff; border-radius:8px; padding:1.25rem; display:flex; gap:2rem; flex-wrap:wrap; align-items:center;">
+        <div>
+          <div style="font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.2rem;">Est. monthly payment</div>
+          <div id="mac-monthly" style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:600; color:var(--orange);">—</div>
+        </div>
+        <div style="font-size:0.8rem; color:var(--muted); line-height:1.6;">
+          <div>Loan amount: <span id="mac-loan" style="color:var(--gray-dark); font-weight:500;">—</span></div>
+          <div>Total interest: <span id="mac-interest" style="color:var(--gray-dark); font-weight:500;">—</span></div>
+          <div>Total cost: <span id="mac-total" style="color:var(--gray-dark); font-weight:500;">—</span></div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--muted); max-width:240px; line-height:1.5;">Principal &amp; interest only. Does not include taxes, insurance, or HOA. Consult a lender for full payment details.</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -187,6 +250,7 @@
   </div>
   <a href="index.html">Home</a>
   <a href="index.html#listings">Listings</a>
+  <a href="resources.html">Resources</a>
   <a href="index.html#contact">Contact Sheryl</a>
   <div style="margin-top:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.25); text-decoration:none;">NextHome Pacific Coast Realty</a></div>
 </footer>
@@ -298,6 +362,83 @@ lb.addEventListener('touchend', e => {
   const dx = e.changedTouches[0].clientX - touchStartX;
   if (Math.abs(dx) > 50) changePhoto(dx < 0 ? 1 : -1);
 });
+
+// Mortgage calculator
+function calcMortgage() {
+  const price = parseFloat(document.getElementById('mac-price').value) || 0;
+  const down = parseFloat(document.getElementById('mac-down').value) || 0;
+  const rate = parseFloat(document.getElementById('mac-rate').value) || 0;
+  const years = parseInt(document.getElementById('mac-term').value) || 30;
+  const loan = price * (1 - down / 100);
+  const r = rate / 100 / 12;
+  const n = years * 12;
+  const monthly = r === 0 ? loan / n : loan * r * Math.pow(1+r,n) / (Math.pow(1+r,n)-1);
+  const total = monthly * n;
+  const fmt = v => '$' + Math.round(v).toLocaleString();
+  document.getElementById('mac-monthly').textContent = fmt(monthly);
+  document.getElementById('mac-loan').textContent = fmt(loan);
+  document.getElementById('mac-interest').textContent = fmt(total - loan);
+  document.getElementById('mac-total').textContent = fmt(total);
+}
+['mac-price','mac-down','mac-rate','mac-term'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calcMortgage);
+});
+calcMortgage();
+
+// Viewing modal
+function openViewingModal() {
+  const modal = document.getElementById('viewing-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeViewingModal() {
+  document.getElementById('viewing-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('viewing-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('viewing-modal')) closeViewingModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeViewingModal();
+});
+document.getElementById('viewing-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = document.getElementById('viewing-submit');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const res = await fetch('https://formspree.io/f/mbdqprnn', {
+      method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      const success = document.getElementById('viewing-success');
+      success.style.display = 'block';
+      btn.style.display = 'none';
+    } else { throw new Error(); }
+  } catch {
+    btn.disabled = false; btn.textContent = 'Request viewing';
+    alert('Something went wrong. Please call Sheryl at (805) 901-7546.');
+  }
+});
 </script>
+
+<!-- VIEWING MODAL -->
+<div id="viewing-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:200; align-items:center; justify-content:center; padding:1rem;">
+  <div style="background:#fff; border-radius:12px; padding:2rem; width:100%; max-width:460px; position:relative;">
+    <button onclick="closeViewingModal()" aria-label="Close" style="position:absolute; top:1rem; right:1.25rem; background:none; border:none; font-size:1.75rem; color:#888; cursor:pointer; line-height:1;">×</button>
+    <div style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:600; color:#2C2C2A; margin-bottom:0.25rem;">Schedule a viewing</div>
+    <div style="font-size:0.85rem; color:#888; margin-bottom:1.5rem;">12750 Macdonald Drive · MLS# V1-33494</div>
+    <form id="viewing-form" action="https://formspree.io/f/mbdqprnn" method="POST">
+      <input type="hidden" name="property" value="12750 Macdonald Drive · MLS# V1-33494">
+      <div style="margin-bottom:1rem;"><label style="display:block; font-size:0.82rem; font-weight:500; color:#5F5E5A; margin-bottom:0.4rem;">Your name</label><input type="text" name="name" placeholder="Full name" required style="width:100%; padding:0.7rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none;"></div>
+      <div style="margin-bottom:1rem;"><label style="display:block; font-size:0.82rem; font-weight:500; color:#5F5E5A; margin-bottom:0.4rem;">Email</label><input type="email" name="email" placeholder="you@example.com" required style="width:100%; padding:0.7rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none;"></div>
+      <div style="margin-bottom:1rem;"><label style="display:block; font-size:0.82rem; font-weight:500; color:#5F5E5A; margin-bottom:0.4rem;">Phone</label><input type="tel" name="phone" placeholder="(805) 000-0000" style="width:100%; padding:0.7rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none;"></div>
+      <div style="margin-bottom:1rem;"><label style="display:block; font-size:0.82rem; font-weight:500; color:#5F5E5A; margin-bottom:0.4rem;">Preferred date &amp; time</label><input type="text" name="preferred_date" placeholder="e.g. Weekday mornings, Saturday afternoon…" style="width:100%; padding:0.7rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none;"></div>
+      <div style="margin-bottom:1rem;"><label style="display:block; font-size:0.82rem; font-weight:500; color:#5F5E5A; margin-bottom:0.4rem;">Anything else?</label><textarea name="message" placeholder="Any questions for Sheryl…" style="width:100%; padding:0.7rem 0.9rem; border:1px solid rgba(0,0,0,0.15); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none; min-height:70px; resize:vertical;"></textarea></div>
+      <button type="submit" id="viewing-submit" style="width:100%; background:#E8632A; color:#fff; border:none; padding:0.85rem; border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; cursor:pointer;">Request viewing</button>
+      <div id="viewing-success" style="display:none; background:#EAF5EE; border:1px solid #2D7A4F; border-radius:6px; padding:1rem; color:#1a5c39; font-size:0.9rem; margin-top:1rem;">✓ Request sent! Sheryl will be in touch shortly.</div>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
