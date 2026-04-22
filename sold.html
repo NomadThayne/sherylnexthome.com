@@ -1,229 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sold Listings · Sheryl Whipple · NextHome Pacific Coast Realty</title>
-  <meta name="description" content="Recent home sales by Sheryl Whipple in the Ojai Valley — buyer and seller representation. NextHome Pacific Coast Realty, Ojai, CA." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sold Listings · Sheryl Whipple · NextHome Pacific Coast Realty</title>
+<meta name="description" content="Recent home sales by Sheryl Whipple in the Ojai Valley. Buyer and seller representation. NextHome Pacific Coast Realty, Ojai CA.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sherylnexthome.com/sold.html">
+<meta property="og:title" content="Sold Listings · Sheryl Whipple · Ojai Valley">
+<meta property="og:description" content="Recent home sales by Sheryl Whipple in the Ojai Valley — buyer and seller representation.">
+<meta property="og:image" content="https://sherylnexthome.com/images/new/PXL_20251007_015010405.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/NH_Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #E8632A; --orange-light: #FDF0E9; --orange-dark: #B84E1E;
+    --gray: #5F5E5A; --gray-light: #F5F4F1; --gray-dark: #2C2C2A;
+    --blue: #185FA5; --sand: #F9F6F0; --text: #2C2C2A;
+    --muted: #888780; --border: rgba(0,0,0,0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; font-weight: 300; color: var(--text); background: #fff; font-size: 17px; line-height: 1.7; }
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ojai Homes · Sheryl Whipple" />
-  <meta property="og:url" content="https://sherylnexthome.com/sold.html" />
-  <meta property="og:title" content="Sold Listings · Sheryl Whipple · Ojai Valley" />
-  <meta property="og:description" content="Recent home sales by Sheryl Whipple in the Ojai Valley — buyer and seller representation." />
-  <meta property="og:image" content="https://sherylnexthome.com/images/new/PXL_20251007_015010405.jpg" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sold Listings · Sheryl Whipple · Ojai Valley" />
-  <meta name="twitter:description" content="Recent home sales by Sheryl Whipple in the Ojai Valley." />
-  <meta name="twitter:image" content="https://sherylnexthome.com/images/new/PXL_20251007_015010405.jpg" />
+  nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+  .nav-nh-logo { height: 30px; width: auto; display: block; }
+  .nav-brand .site-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--gray); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--gray-dark); border-radius: 2px; }
+  .mobile-menu { display: none; position: fixed; inset: 62px 0 0 0; background: #fff; z-index: 99; flex-direction: column; padding: 2rem; gap: 0; border-top: 1px solid var(--border); }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { text-decoration: none; color: var(--gray-dark); font-size: 1.1rem; font-weight: 400; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+  .mobile-menu a:hover { color: var(--orange); }
+  @media (max-width: 640px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
 
-  <link rel="stylesheet" href="style.css" />
+  .back-bar { padding: 0.75rem 2rem; border-bottom: 1px solid var(--border); }
+  .back-bar a { font-size: 0.82rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .back-bar a:hover { color: var(--orange); }
 
-  <style>
-    /* Two additional badge colors — everything else reuses existing .badge styles */
-    .badge-sold  { background: #2a7a5a; }
-    .badge-buyer { background: #185fa5; }
+  section { padding: 5rem 2rem; }
+  .container { max-width: 960px; margin: 0 auto; }
+  .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; line-height: 1.2; color: var(--gray-dark); margin-bottom: 1rem; }
+  .section-title em { font-style: italic; color: var(--orange); }
+  .section-intro { color: var(--gray); max-width: 560px; margin-bottom: 3rem; }
 
-    /* Placeholder for cards with no photo yet */
-    .card-img-placeholder {
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: #f0ebe4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .placeholder-address {
-      font-size: 0.8rem;
-      color: #aaa;
-      letter-spacing: 0.03em;
-    }
+  .listings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .listing-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+  .listing-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); }
+  .listing-img { height: 200px; background: var(--gray-light); position: relative; overflow: hidden; }
+  .listing-img img { width: 100%; height: 100%; object-fit: cover; }
+  .listing-badge { position: absolute; top: 12px; left: 12px; color: #fff; font-size: 0.7rem; font-weight: 500; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .listing-badge.sold { background: #2D7A4F; }
+  .listing-badge.buyer { background: var(--blue); }
+  .listing-body { padding: 1.25rem; }
+  .listing-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 0.25rem; }
+  .listing-address { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem; }
+  .listing-details { display: flex; gap: 0.5rem; font-size: 0.82rem; color: var(--gray); margin-bottom: 0.85rem; flex-wrap: wrap; }
+  .listing-details span { white-space: nowrap; }
+  .listing-details span + span::before { content: '·'; margin-right: 0.5rem; color: var(--muted); }
+  .listing-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.55; margin-bottom: 1rem; }
+  .listing-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: var(--gray-dark); margin-bottom: 0.35rem; }
+  .listing-avail { font-size: 0.8rem; color: var(--muted); }
+  .listing-link { display: inline-block; font-size: 0.85rem; font-weight: 500; color: var(--orange); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  .listing-link:hover { border-color: var(--orange); }
 
-    /* Sold-specific status line under price */
-    .card-status {
-      font-size: 0.78rem;
-      color: #888;
-      margin: 0;
-    }
-  </style>
+  .sold-disclaimer { text-align: center; font-size: 0.77rem; color: var(--muted); max-width: 600px; margin: 0 auto 4rem; padding: 0 2rem; line-height: 1.6; }
+
+  .nh-luke { height: 36px; width: auto; display: inline-block; vertical-align: middle; filter: brightness(0) invert(1); opacity: 0.7; }
+  footer { background: var(--gray-dark); color: rgba(255,255,255,0.55); padding: 3rem 2rem; text-align: center; font-size: 0.85rem; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; margin-bottom: 0.5rem; }
+  footer nav { background: transparent; border: none; position: static; height: auto; padding: 0; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0; display: flex; }
+  footer nav a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+  footer nav a:hover { color: var(--orange); }
+  .footer-note { margin-top: 1.5rem; font-size: 0.77rem; color: rgba(255,255,255,0.3); max-width: 520px; margin-left: auto; margin-right: auto; }
+</style>
 </head>
 <body>
 
-  <!-- NAV — identical to index.html with Sold link added -->
-  <header class="site-header" id="top">
-    <div class="nav-container">
-      <a class="nav-logo" href="index.html">
-        <img src="images/NH_Logo.png" alt="NextHome" />
-        Ojai Homes
-      </a>
-      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#listings">Listings</a></li>
-        <li><a href="sold.html">Sold</a></li>
-        <li><a href="index.html#neighborhood">Neighborhood</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="index.html#agent">Your Agent</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+<nav>
+  <a class="nav-brand" href="index.html">
+    <img src="images/NH_Logo.png" alt="NextHome" class="nav-nh-logo">
+    <span class="site-name">Ojai Homes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#listings">Listings</a></li>
+    <li><a href="sold.html" class="active">Sold</a></li>
+    <li><a href="index.html#neighborhood">Neighborhood</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="index.html#agent">Your Agent</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <div class="back-link-wrap">
-    <a href="index.html" class="back-link">← Back to home</a>
-  </div>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#listings" onclick="closeMobileMenu()">Listings</a>
+  <a href="sold.html" onclick="closeMobileMenu()">Sold</a>
+  <a href="index.html#neighborhood" onclick="closeMobileMenu()">Neighborhood</a>
+  <a href="resources.html" onclick="closeMobileMenu()">Resources</a>
+  <a href="index.html#agent" onclick="closeMobileMenu()">Your Agent</a>
+  <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
 
-  <!-- PAGE HEADER -->
-  <section class="listings-header">
-    <p class="section-eyebrow">Past Sales</p>
+<div class="back-bar"><a href="index.html">← Back to home</a></div>
+
+<section id="sold">
+  <div class="container">
+    <p class="section-label">Past Sales</p>
     <h2 class="section-title">Homes Sheryl Has <em>Sold</em></h2>
-    <p class="section-intro">
-      A selection of homes Sheryl has represented — as listing agent for sellers
-      and as buyer's agent helping clients find their place in the valley.
-    </p>
-  </section>
+    <p class="section-intro">A selection of homes Sheryl has represented — as listing agent for sellers and as buyer's agent helping clients find their place in the valley.</p>
 
-  <!-- SOLD CARDS — same markup pattern as listings grid on index.html -->
-  <section class="listings-grid" id="sold">
+    <div class="listings-grid">
 
-    <!-- 1340 Grand Ave -->
-    <article class="listing-card">
-      <div class="card-img-wrap">
-        <div class="card-badge badge-sold">Sold</div>
-        <div class="card-img-placeholder">
-          <span class="placeholder-address">1340 Grand Ave · photo coming</span>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="images/sold/1340Grand.jpg" alt="1340 Grand Ave, Ojai CA" onerror="this.parentElement.style.background='var(--gray-light)'">
+          <span class="listing-badge sold">Sold</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">1340 Grand Ave</div>
+          <div class="listing-address">Ojai, CA 93023</div>
+          <div class="listing-details"><span>3 bed</span><span>2 bath</span><span>1,700 sq ft</span><span>0.53 acres</span></div>
+          <p class="listing-desc">Ranch-style home with mountain views, remodeled kitchen, and mature orchard on over half an acre in the heart of Ojai.</p>
+          <div class="listing-price">$1,480,000</div>
+          <div class="listing-avail">Sold Sep 2022 · Seller representation</div>
         </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">1340 Grand Ave</h2>
-        <p class="card-location">Ojai, CA 93023</p>
-        <p class="card-meta">3 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,700 sq ft &nbsp;·&nbsp; 0.53 acres</p>
-        <p class="card-desc">Ranch-style home with mountain views, remodeled kitchen, and mature orchard on over half an acre in the heart of Ojai.</p>
-        <p class="card-price">$1,480,000</p>
-        <p class="card-status">Sold Sep 2022 &nbsp;·&nbsp; Seller representation</p>
-      </div>
-    </article>
 
-    <!-- 325 Descanso Ave -->
-    <article class="listing-card">
-      <div class="card-img-wrap">
-        <div class="card-badge badge-sold">Sold</div>
-        <div class="card-img-placeholder">
-          <span class="placeholder-address">325 Descanso Ave · photo coming</span>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="images/sold/325Descanso.jpg" alt="325 Descanso Ave, Ojai CA" onerror="this.parentElement.style.background='var(--gray-light)'">
+          <span class="listing-badge sold">Sold</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">325 Descanso Ave</div>
+          <div class="listing-address">Ojai, CA 93023</div>
+          <div class="listing-details"><span>4 bed</span><span>3 bath</span><span>2,163 sq ft</span><span>9,108 sq ft lot</span></div>
+          <p class="listing-desc">Spacious home with high beamed ceilings, open floor plan, and granite kitchen — steps from Los Padres trailheads.</p>
+          <div class="listing-price">$1,190,000</div>
+          <div class="listing-avail">Sold Apr 2023 · Seller representation</div>
         </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">325 Descanso Ave</h2>
-        <p class="card-location">Ojai, CA 93023</p>
-        <p class="card-meta">4 bed &nbsp;·&nbsp; 3 bath &nbsp;·&nbsp; 2,163 sq ft &nbsp;·&nbsp; 9,108 sq ft lot</p>
-        <p class="card-desc">Spacious home with high beamed ceilings, open floor plan, and granite kitchen — close to Los Padres trailheads.</p>
-        <p class="card-price">$1,190,000</p>
-        <p class="card-status">Sold Apr 2023 &nbsp;·&nbsp; Seller representation</p>
-      </div>
-    </article>
 
-    <!-- 1119 Mariano Dr -->
-    <article class="listing-card">
-      <div class="card-img-wrap">
-        <div class="card-badge badge-sold">Sold</div>
-        <div class="card-img-placeholder">
-          <span class="placeholder-address">1119 Mariano Dr · photo coming</span>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="images/sold/1119Mariano.webp" alt="1119 Mariano Dr, Ojai CA" onerror="this.parentElement.style.background='var(--gray-light)'">
+          <span class="listing-badge sold">Sold</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">1119 Mariano Dr</div>
+          <div class="listing-address">Ojai, CA 93023</div>
+          <div class="listing-details"><span>4 bed</span><span>2 bath</span><span>1,311 sq ft</span><span>9,751 sq ft lot</span></div>
+          <p class="listing-desc">Beloved ranch home on a quiet cul-de-sac in Mira Monte — shaded by oaks, with avocado and fruit trees and a private pergola.</p>
+          <div class="listing-price">$950,000</div>
+          <div class="listing-avail">Sold Feb 2022 · Seller representation</div>
         </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">1119 Mariano Dr</h2>
-        <p class="card-location">Ojai, CA 93023</p>
-        <p class="card-meta">4 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,311 sq ft &nbsp;·&nbsp; 9,751 sq ft lot</p>
-        <p class="card-desc">Beloved ranch home on a quiet cul-de-sac in Mira Monte — oak shade, avocado and fruit trees, private pergola.</p>
-        <p class="card-price">$950,000</p>
-        <p class="card-status">Sold Feb 2022 &nbsp;·&nbsp; Seller representation</p>
-      </div>
-    </article>
 
-    <!-- 330 N La Luna Ave -->
-    <article class="listing-card">
-      <div class="card-img-wrap">
-        <div class="card-badge badge-sold">Sold</div>
-        <div class="card-img-placeholder">
-          <span class="placeholder-address">330 N La Luna Ave · photo coming</span>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="images/sold/330NLaLuna.jpg" alt="330 N La Luna Ave, Ojai CA" onerror="this.parentElement.style.background='var(--gray-light)'">
+          <span class="listing-badge sold">Sold</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">330 N La Luna Ave</div>
+          <div class="listing-address">Meiners Oaks · Ojai, CA 93023</div>
+          <div class="listing-details"><span>3 bed</span><span>2 bath</span><span>1,210 sq ft</span><span>13,265 sq ft lot</span></div>
+          <p class="listing-desc">Charming double-lot home with hardwood floors, updated kitchen, koi pond, raised garden beds, and a detached studio.</p>
+          <div class="listing-price">$805,000</div>
+          <div class="listing-avail">Sold Jun 2021 · Seller representation</div>
         </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">330 N La Luna Ave</h2>
-        <p class="card-location">Meiners Oaks · Ojai, CA 93023</p>
-        <p class="card-meta">3 bed &nbsp;·&nbsp; 2 bath &nbsp;·&nbsp; 1,210 sq ft &nbsp;·&nbsp; 13,265 sq ft lot</p>
-        <p class="card-desc">Charming double-lot home with hardwood floors, updated kitchen, koi pond, raised garden beds, and a detached studio.</p>
-        <p class="card-price">$805,000</p>
-        <p class="card-status">Sold Jun 2021 &nbsp;·&nbsp; Seller representation</p>
-      </div>
-    </article>
 
-    <!-- 2175 Valley Meadow Dr -->
-    <article class="listing-card">
-      <div class="card-img-wrap">
-        <div class="card-badge badge-buyer">Buyer Rep</div>
-        <div class="card-img-placeholder">
-          <span class="placeholder-address">2175 Valley Meadow Dr · photo coming</span>
+      <div class="listing-card">
+        <div class="listing-img">
+          <img src="images/sold/2175ValleyMeadow.jpg" alt="2175 Valley Meadow Dr, Oak View CA" onerror="this.parentElement.style.background='var(--gray-light)'">
+          <span class="listing-badge buyer">Buyer Rep</span>
+        </div>
+        <div class="listing-body">
+          <div class="listing-name">2175 Valley Meadow Dr</div>
+          <div class="listing-address">Oak View, CA 93022</div>
+          <div class="listing-details"><span>4 bed</span><span>2.5 bath</span><span>2,457 sq ft</span><span>1.25 acres</span></div>
+          <p class="listing-desc">Private creekside property with Brazilian cherrywood floors, solar, horse facilities, mature fruit trees, and views from every room.</p>
+          <div class="listing-price">$1,250,000</div>
+          <div class="listing-avail">Sold Nov 2021 · Buyer representation</div>
         </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">2175 Valley Meadow Dr</h2>
-        <p class="card-location">Oak View, CA 93022</p>
-        <p class="card-meta">4 bed &nbsp;·&nbsp; 2.5 bath &nbsp;·&nbsp; 2,457 sq ft &nbsp;·&nbsp; 1.25 acres</p>
-        <p class="card-desc">Private creekside property with Brazilian cherrywood floors, solar, horse facilities, mature fruit trees, and views from every room.</p>
-        <p class="card-price">$1,250,000</p>
-        <p class="card-status">Sold Nov 2021 &nbsp;·&nbsp; Buyer representation</p>
-      </div>
-    </article>
 
-    <!-- CTA card — matches "Your property here" on index.html -->
-    <article class="listing-card listing-card-cta">
-      <div class="card-img-wrap cta-img-wrap">
-        <span class="cta-icon">🏠</span>
+      <div class="listing-card" style="border: 2px dashed rgba(0,0,0,0.12); background: var(--sand);">
+        <div class="listing-img" style="background: var(--gray-light);"><span style="font-size:3rem;">🏠</span></div>
+        <div class="listing-body">
+          <div class="listing-name" style="font-style:italic; color:var(--muted);">Your home here</div>
+          <div class="listing-address">Ojai Valley · Ventura County</div>
+          <p class="listing-desc" style="margin-top:0.5rem;">Selling or buying in Ojai? Sheryl brings 25 years of local roots, deep market knowledge, and a personal approach — on both sides of the table.</p>
+          <a class="listing-link" href="index.html#contact">Contact Sheryl →</a>
+        </div>
       </div>
-      <div class="card-body">
-        <h2 class="card-address">Your home here</h2>
-        <p class="card-location">Ojai Valley · Ventura County</p>
-        <p class="card-desc">Selling or buying in Ojai? Sheryl brings 25 years of local roots, deep market knowledge, and a personal approach — on both sides of the table.</p>
-        <a href="index.html#contact" class="card-link">Contact Sheryl →</a>
-      </div>
-    </article>
 
-  </section>
-
-  <p class="listings-disclaimer">
-    Sale prices and dates sourced from public MLS records. All information deemed reliable but not guaranteed.
-    Buyer to verify all details. Sheryl Whipple, CalDRE #01379424, NextHome Pacific Coast Realty.
-  </p>
-
-  <!-- FOOTER — identical to index.html -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="images/NH_Luke.png" alt="NextHome" class="footer-mascot" />
-        <p class="footer-brand-name">Ojai Homes</p>
-        <p class="footer-tagline">
-          A <a href="https://www.nexthomepacificcoastrealty.com">NextHome Pacific Coast Realty</a>
-          neighborhood resource · Ojai Valley, CA 93023
-        </p>
-      </div>
-      <nav class="footer-nav">
-        <a href="index.html#listings">Listings</a>
-        <a href="sold.html">Sold</a>
-        <a href="index.html#neighborhood">Neighborhood</a>
-        <a href="index.html#about">About Ojai</a>
-        <a href="index.html#agent">Sheryl</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-      <p class="footer-legal">
-        Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with
-        <a href="https://www.nexthomepacificcoastrealty.com">NextHome Pacific Coast Realty</a>
-        · 307 A East Matilija St · Ojai, CA 93023. This site is an independent neighborhood resource
-        for buyers and sellers in the Ojai Valley.
-      </p>
-      <p class="footer-copy">© 2026 Sheryl Whipple · NextHome Pacific Coast Realty · All rights reserved</p>
     </div>
-  </footer>
+  </div>
+</section>
 
+<p class="sold-disclaimer">Sale prices and dates sourced from public MLS records. All information deemed reliable but not guaranteed. Buyer to verify all details. Sheryl Whipple, CalDRE #01379424, NextHome Pacific Coast Realty.</p>
+
+<footer>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+    <img src="images/NH_Luke.png" alt="NextHome mascot" class="nh-luke">
+    <div class="footer-brand">Ojai Homes</div>
+  </div>
+  <div style="font-size:0.82rem; margin-bottom:0.5rem;">A <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5); text-decoration:none;">NextHome Pacific Coast Realty</a> neighborhood resource · Ojai Valley, CA 93023</div>
+  <nav>
+    <a href="index.html#listings">Listings</a>
+    <a href="sold.html">Sold</a>
+    <a href="index.html#neighborhood">Neighborhood</a>
+    <a href="index.html#about">About Ojai</a>
+    <a href="index.html#agent">Sheryl</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <div class="footer-note">Sheryl Whipple is a licensed real estate agent in California, CalDRE #01379424, affiliated with <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4); text-decoration:none;">NextHome Pacific Coast Realty</a> · 307 A East Matilija St · Ojai, CA 93023. This site is an independent neighborhood resource for buyers and sellers in the Ojai Valley.</div>
+  <div style="margin-top:1.5rem; font-size:0.75rem; color:rgba(255,255,255,0.25);">© 2026 Sheryl Whipple · NextHome Pacific Coast Realty · All rights reserved</div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMobileMenu();
+  });
+</script>
 </body>
 </html>
