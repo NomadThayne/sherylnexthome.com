@@ -182,6 +182,17 @@
   footer nav a:hover { color: var(--orange); }
   .footer-note { margin-top: 1.5rem; font-size: 0.77rem; color: rgba(255,255,255,0.3); max-width: 520px; margin-left: auto; margin-right: auto; }
 
+  /* VIEWING MODAL */
+  .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:200; align-items:center; justify-content:center; padding:1rem; }
+  .modal-overlay.open { display:flex; }
+  .modal { background:#fff; border-radius:12px; padding:2rem; width:100%; max-width:460px; position:relative; }
+  .modal-title { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:600; color:var(--gray-dark); margin-bottom:0.25rem; }
+  .modal-sub { font-size:0.85rem; color:var(--muted); margin-bottom:1.5rem; }
+  .modal-close { position:absolute; top:1rem; right:1.25rem; background:none; border:none; font-size:1.75rem; color:var(--muted); cursor:pointer; line-height:1; }
+  .modal-close:hover { color:var(--gray-dark); }
+  .btn-schedule { display:block; width:100%; background:transparent; color:var(--orange); border:1px solid var(--orange); padding:0.6rem; border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; text-align:center; cursor:pointer; transition:background 0.2s, color 0.2s; margin-top:0.6rem; }
+  .btn-schedule:hover { background:var(--orange); color:#fff; }
+
   @media (max-width: 640px) { .hero-stats { gap: 1.5rem; } }
 </style>
 </head>
@@ -259,6 +270,7 @@
           <div class="listing-price">$3,575,000</div>
           <div class="listing-avail">Active · MLS# V1-33494</div>
           <a class="listing-link" href="macdonald.html">View photos &amp; details →</a>
+          <button class="btn-schedule" onclick="openViewingModal('12750 Macdonald Drive', 'MLS# V1-33494')">Schedule a viewing</button>
         </div>
       </div>
 
@@ -279,6 +291,7 @@
           <div class="listing-price">$1,970,000</div>
           <div class="listing-avail">Active · <a href="https://www.nexthomepacificcoastrealty.com" target="_blank" rel="noopener" style="color:var(--muted); text-decoration:none;">NextHome Pacific Coast Realty</a></div>
           <a class="listing-link" href="mcnell.html">View photos &amp; details →</a>
+          <button class="btn-schedule" onclick="openViewingModal('757 McNell Road', '')">Schedule a viewing</button>
         </div>
       </div>
 
@@ -334,14 +347,19 @@
           <li><span class="place">Bart's Books (outdoor)</span></li>
           <li><span class="place">Ojai Valley Museum</span></li>
           <li><span class="place">Sunday Farmers Market</span></li>
+          <li><span class="place">Ojai Tennis Tournament</span></li>
+          <li><span class="place">Mountains 2 Beach Marathon</span></li>
+          <li><span class="place">Ventura Marathon</span></li>
         </ul>
-        <h3 style="margin-top:2rem;">Dining &amp; Coffee</h3>
+        <h3 style="margin-top:2rem;">Dining &amp; Refreshment</h3>
         <ul class="hood-list">
           <li><span class="place">Farmer &amp; the Cook</span></li>
           <li><span class="place">Azu Restaurant</span></li>
+          <li><span class="place">The Deer Lodge</span></li>
           <li><span class="place">Beacon Coffee</span></li>
           <li><span class="place">Ranch House (historic)</span></li>
           <li><span class="place">Ojai Beverage Company</span></li>
+          <li><span class="place">Bliss Frozen Yogurt</span></li>
         </ul>
       </div>
       <div class="hood-column">
@@ -354,10 +372,14 @@
           <li><span class="place">Ojai Valley Inn &amp; Spa</span></li>
           <li><span class="place">Matilija Hot Springs</span></li>
         </ul>
-        <h3 style="margin-top:2rem;">Schools &amp; Services</h3>
+        <h3 style="margin-top:2rem;">Schools</h3>
         <ul class="hood-list">
           <li><span class="place">Ojai Unified School District</span></li>
-          <li><span class="place">Thacher School (boarding)</span></li>
+          <li><span class="place">Thacher School</span></li>
+          <li><span class="place">Ojai Valley School</span></li>
+          <li><span class="place">Villanova Preparatory School</span></li>
+          <li><span class="place">Oak Grove School</span></li>
+          <li><span class="place">Rock Tree Sky</span></li>
           <li><span class="place">Ventura County Medical Center</span><span class="dist">30 min drive</span></li>
           <li><span class="place">Ventura Airport</span><span class="dist">35 min drive</span></li>
           <li><span class="place">LAX</span><span class="dist">90 min drive</span></li>
@@ -413,6 +435,7 @@
     <p class="section-label">Your Local Expert</p>
     <div class="agent-grid">
       <img src="images/sheryl.jpg" alt="Sheryl Whipple, Realtor" class="agent-photo"
+           style="object-position: center 8%;"
            onerror="this.style.background='#555'; this.style.minHeight='220px';">
       <div class="agent-info">
         <h2>Sheryl Whipple</h2>
@@ -508,6 +531,40 @@
 </section>
 
 <!-- FOOTER -->
+<!-- VIEWING MODAL -->
+<div class="modal-overlay" id="viewing-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeViewingModal()" aria-label="Close">×</button>
+    <div class="modal-title">Schedule a viewing</div>
+    <div class="modal-sub" id="modal-sub">Contact Sheryl to arrange a time</div>
+    <form id="viewing-form" action="https://formspree.io/f/mbdqprnn" method="POST">
+      <input type="hidden" name="property" id="modal-property">
+      <div class="form-group">
+        <label for="v-name">Your name</label>
+        <input type="text" id="v-name" name="name" placeholder="Full name" required>
+      </div>
+      <div class="form-group">
+        <label for="v-email">Email</label>
+        <input type="email" id="v-email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="v-phone">Phone</label>
+        <input type="tel" id="v-phone" name="phone" placeholder="(805) 000-0000">
+      </div>
+      <div class="form-group">
+        <label for="v-date">Preferred date &amp; time</label>
+        <input type="text" id="v-date" name="preferred_date" placeholder="e.g. Weekday mornings, Saturday afternoon…">
+      </div>
+      <div class="form-group">
+        <label for="v-message">Anything else?</label>
+        <textarea id="v-message" name="message" style="min-height:70px;" placeholder="Any questions or notes for Sheryl…"></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="viewing-submit">Request viewing</button>
+      <div class="form-success" id="viewing-success">✓ Request sent! Sheryl will be in touch shortly.</div>
+    </form>
+  </div>
+</div>
+
 <footer>
   <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
     <img src="images/NH_Luke.png" alt="NextHome mascot" class="nh-luke">
@@ -581,6 +638,44 @@
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
       alert('Something went wrong. Please email Sheryl directly at sherylw.realestate@gmail.com');
+    }
+  });
+
+  // Viewing modal
+  function openViewingModal(property, mls) {
+    document.getElementById('modal-property').value = property;
+    document.getElementById('modal-sub').textContent = mls ? property + ' · ' + mls : property;
+    document.getElementById('viewing-form').reset();
+    document.getElementById('viewing-success').classList.remove('visible');
+    const btn = document.getElementById('viewing-submit');
+    btn.disabled = false; btn.textContent = 'Request viewing'; btn.style.display = '';
+    document.getElementById('viewing-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeViewingModal() {
+    document.getElementById('viewing-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('viewing-modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('viewing-modal')) closeViewingModal();
+  });
+  document.getElementById('viewing-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('viewing-submit');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch('https://formspree.io/f/mbdqprnn', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('viewing-success').classList.add('visible');
+        btn.style.display = 'none';
+      } else { throw new Error(); }
+    } catch {
+      btn.disabled = false; btn.textContent = 'Request viewing';
+      alert('Something went wrong. Please call Sheryl at (805) 901-7546.');
     }
   });
 </script>
