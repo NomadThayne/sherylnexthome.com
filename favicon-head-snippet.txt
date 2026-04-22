@@ -1,0 +1,11 @@
+# Favicon — paste into <head> on all 5 pages
+# Replace the existing: <link rel="icon" type="image/png" href="images/NH_Logo.png">
+# with these lines:
+
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Ojai Homes" />
+<link rel="manifest" href="/site.webmanifest" />
